@@ -129,12 +129,12 @@ const Hero = () => {
       </motion.h2>
       {/* HERO BUTTONS */}
       <motion.div variants={heroChildVariants}>
-        <Button>
-          <DocumentArrowDownIcon className="mr-2 size-4" />
-          <Link href={'/JensonCaparida_Resume.pdf'} target="_blank">
+        <Link href={'/JensonCaparida_Resume.pdf'} target="_blank">
+          <Button>
+            <DocumentArrowDownIcon className="mr-2 size-4" />
             Resume
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </motion.div>
       {/* SOCIAL BAR */}
       <motion.div
