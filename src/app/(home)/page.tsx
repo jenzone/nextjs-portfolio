@@ -1,3 +1,5 @@
+import Hero from './section/hero'
+
 import NavBar from '@/components/navigation/nav-bar'
 import { Container } from '@/components/ui/container'
 
@@ -7,6 +9,7 @@ export default function Home() {
       <section>
         <Container>
           <NavBar />
+          <Hero />
         </Container>
       </section>
       <section id="projects">Projects</section>
