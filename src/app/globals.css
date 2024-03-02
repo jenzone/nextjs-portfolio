@@ -31,6 +31,7 @@ section {
   height: 100vh;
 }
 
+/* SOCIAL ANIMATION */
 .social {
   position: relative;
 }
@@ -54,4 +55,20 @@ section {
 .social:hover::before {
   width: 99%;
   height: 99%;
+}
+
+/* SECTION HEADING */
+.heading {
+  position: relative;
+}
+
+.heading::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  border-radius: 50px;
+  background-color: var(--primary-100);
 }

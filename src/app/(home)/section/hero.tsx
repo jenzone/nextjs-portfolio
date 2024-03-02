@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { motion, Variants } from 'framer-motion'
 import { DocumentArrowDownIcon } from '@heroicons/react/24/solid'
 
-import Button from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 import { socials } from '@/components/navigation/social'
 
 const Hero = () => {
