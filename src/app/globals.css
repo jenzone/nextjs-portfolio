@@ -70,5 +70,48 @@ section {
   bottom: -10px;
   left: 0;
   border-radius: 50px;
-  background-color: var(--primary-100);
+  background-color: var(--primary-200);
+}
+
+/* TAB ANIMATION */
+.tab {
+  position: relative;
+}
+
+.tab::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  border-radius: 250px;
+  background-color: var(--primary-200);
+}
+
+/* TAB-PANEL ANIMATION */
+
+.tab-panel {
+  position: relative;
+}
+
+.tab-panel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: var(--accent-200);
+  border-radius: 8px;
+  transition:
+    width 0.4s ease-in-out,
+    height 0.4s ease-in-out;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.tab-panel:hover::before {
+  width: 100%;
+  height: 100%;
 }
