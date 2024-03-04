@@ -1,0 +1,32 @@
+[
+  {
+    "id": "js-furniture",
+    "name": "JS Furniture",
+    "description": "A furniture store where customers can find everything they need to furnish their homes with style and comfort",
+    "img": "ecommerce-admin.png",
+    "techstack": [
+      "Next JS",
+      "TypeScript",
+      "Tailwind CSS",
+      "Stripe",
+      "Shadcn UI"
+    ],
+    "featured": true
+  },
+  {
+    "id": "ecommerce-admin",
+    "name": "E-commerce Admin",
+    "description": "A full-stack e-commerce admin app that users can create, manage, and link their online stores with various APIU+2019s",
+    "img": "js-furniture.png",
+    "techstack": [
+      "Next JS",
+      "TypeScript",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Clerk",
+      "Heroku"
+    ],
+    "featured": true
+  }
+]

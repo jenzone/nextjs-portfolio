@@ -1,6 +1,7 @@
 import Hero from './section/hero'
 import About from './section/about'
 import Skills from './section/skills'
+import Projects from './section/projects'
 
 import NavBar from '@/components/navigation/nav-bar'
 import { Container } from '@/components/ui/container'
@@ -22,7 +23,9 @@ export default function Home() {
           <section id="skills" className="h-full min-h-screen">
             <Skills />
           </section>
-          <section id="projects">Projects</section>
+          <section id="projects" className="h-full min-h-screen">
+            <Projects />
+          </section>
           <section id="contact">Contact</section>
         </Container>
       </div>

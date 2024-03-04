@@ -115,3 +115,35 @@ section {
   width: 100%;
   height: 100%;
 }
+
+/* SCROLLBAR */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-200) #eeecec;
+}
+
+/* ARROW ANIMATION PRODUCT CARD */
+.arrow {
+  position: relative;
+}
+
+.arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: var(--primary-200);
+  border-radius: 50%;
+  transition:
+    width 0.3s ease-in-out,
+    height 0.3s ease-in-out;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.group:hover .arrow::before {
+  width: 150%;
+  height: 150%;
+}
