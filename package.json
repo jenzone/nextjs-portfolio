@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@icons-pack/react-simple-icons": "^9.3.0",
     "framer-motion": "^11.0.6",
