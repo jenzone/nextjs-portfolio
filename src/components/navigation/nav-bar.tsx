@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Image from 'next/image'
 import { motion, Variants } from 'framer-motion'
 import { Link as ScrollLink } from 'react-scroll'
@@ -7,8 +8,12 @@ import { Link as ScrollLink } from 'react-scroll'
 import SideBar from './side-bar'
 
 import links from '@/data/links.json'
+import { usePathname } from 'next/navigation'
 
 const NavBar = () => {
+  const pathname = usePathname()
+  const isHomePage = pathname === '/'
+
   const navBarVariants: Variants = {
     initial: {
       y: 0.1,
@@ -47,7 +52,9 @@ const NavBar = () => {
     >
       {/* LOGO */}
       <motion.div variants={navBarChildVariants} className="h-auto w-auto">
-        <Image src="/logo-light.svg" alt="logo" width={28} height={28} />
+        <Link href="/">
+          <Image src="/logo-light.svg" alt="logo" width={28} height={28} />
+        </Link>
       </motion.div>
       {/* LINKS */}
       <motion.div className="hidden flex-row space-x-6 sm:flex">
@@ -57,9 +64,13 @@ const NavBar = () => {
             variants={navBarChildVariants}
             className="cursor-pointer font-bold text-neutral-400 transition-colors duration-300 ease-out hover:text-[var(--accent-200)]"
           >
-            <ScrollLink to={item.id} smooth={true} duration={500} delay={200}>
-              {item.label}
-            </ScrollLink>
+            {isHomePage ? (
+              <ScrollLink to={item.id} smooth={true} duration={500} delay={200}>
+                {item.label}
+              </ScrollLink>
+            ) : (
+              <Link href="/">{item.label}</Link>
+            )}
           </motion.span>
         ))}
       </motion.div>

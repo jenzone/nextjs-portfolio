@@ -12,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
   switch (variant) {
     case 'outline':
       buttonStyle =
-        'border border-[var(--primary-200)] bg-transparent text-[var(--primary-200)] hover:bg-[var(--primary-200)] hover:text-[var(--text-100)] transition-colors duration-300 ease-out'
+        'border border-[var(--primary-200)] bg-transparent text-[var(--primary-200)] hover:bg-[var(--primary-200)] hover:text-[var(--text-100)] transition-colors duration-500 ease-out'
       hoverAnimation = null
       break
     case 'solid':

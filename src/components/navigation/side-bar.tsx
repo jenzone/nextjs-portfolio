@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { Link as ScrollLink } from 'react-scroll'
 import { motion, Variants } from 'framer-motion'
 
@@ -11,6 +12,9 @@ import { socials } from './social'
 import links from '@/data/links.json'
 
 const SideBar = () => {
+  const pathname = usePathname()
+  const isHomePage = pathname === '/'
+
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -131,17 +135,24 @@ const SideBar = () => {
           className="flex flex-col space-y-4"
         >
           {links.map((item) => (
-            <motion.span key={item.id} variants={linksChildVariants}>
-              <ScrollLink
-                to={item.id}
-                smooth={true}
-                duration={500}
-                delay={1000}
-                onClick={() => setOpen && setOpen(false)}
-                className="cursor-pointer text-5xl font-medium transition-colors duration-300 ease-out hover:text-[var(--accent-200)]"
-              >
-                {item.label}
-              </ScrollLink>
+            <motion.span
+              key={item.id}
+              variants={linksChildVariants}
+              className="cursor-pointer text-5xl font-medium transition-colors duration-300 ease-out hover:text-[var(--accent-200)]"
+            >
+              {isHomePage ? (
+                <ScrollLink
+                  to={item.id}
+                  smooth={true}
+                  duration={500}
+                  delay={1000}
+                  onClick={() => setOpen && setOpen(false)}
+                >
+                  {item.label}
+                </ScrollLink>
+              ) : (
+                <Link href="/">{item.label}</Link>
+              )}
             </motion.span>
           ))}
         </motion.div>

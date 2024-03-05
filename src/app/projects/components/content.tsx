@@ -1,17 +1,14 @@
 'use client'
 
-import Link from 'next/link'
 import { useEffect, useRef } from 'react'
-import { ArrowLongRightIcon } from '@heroicons/react/24/solid'
 import { motion, Variants, useAnimation, useInView } from 'framer-motion'
 
 import { Heading } from '@/components/ui/heading'
 import { ProjectCard } from '@/components/ui/project-card'
-import { Button } from '@/components/ui/button'
 
 import projects from '@/data/projects.json'
 
-const Projects = () => {
+const ProjectContent = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -22,10 +19,6 @@ const Projects = () => {
       controls.start('visible')
     }
   }, [isInView, controls])
-
-  const projectsFiltered = projects.filter(
-    (project) => project.featured === true,
-  )
 
   const projectVariants: Variants = {
     hidden: {
@@ -62,12 +55,12 @@ const Projects = () => {
       animate={controls}
       className="flex flex-col items-center justify-center space-y-16 py-16"
     >
-      <Heading heading="Featured Projects" />
+      <Heading heading="Projects" />
       <motion.div
         variants={projectChildVariants}
         className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
       >
-        {projectsFiltered.map((project) => (
+        {projects.map((project) => (
           <ProjectCard
             key={project.id}
             id={project.id}
@@ -78,16 +71,8 @@ const Projects = () => {
           />
         ))}
       </motion.div>
-      <motion.div variants={projectChildVariants}>
-        <Link href="/projects">
-          <Button>
-            View All Projects
-            <ArrowLongRightIcon className="ml-2 size-6" />
-          </Button>
-        </Link>
-      </motion.div>
     </motion.div>
   )
 }
 
-export default Projects
+export default ProjectContent
