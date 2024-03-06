@@ -1,11 +1,15 @@
 type ButtonProps = {
   variant?: 'outline' | 'solid'
   children: React.ReactNode
+  className?: string
+  type?: 'button' | 'submit' | 'reset'
 }
 
 export const Button: React.FC<ButtonProps> = ({
   variant = 'solid',
   children,
+  className,
+  type = 'button',
 }) => {
   let buttonStyle, hoverAnimation
 
@@ -27,7 +31,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <div>
-      <button className="group relative z-20">
+      <button className={`${className} group relative z-20`} type={type}>
         {/* button content */}
         <span
           className={`relative z-10 flex items-center justify-center rounded-sm px-5 py-3 ${buttonStyle}`}

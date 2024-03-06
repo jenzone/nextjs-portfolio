@@ -1,7 +1,10 @@
+import Image from 'next/image'
+
 import Hero from './section/hero'
 import About from './section/about'
 import Skills from './section/skills'
 import Projects from './section/projects'
+import Contact from './section/contact'
 
 import NavBar from '@/components/navigation/nav-bar'
 import { Container } from '@/components/ui/container'
@@ -26,7 +29,9 @@ export default function Home() {
           <section id="projects" className="h-full min-h-screen">
             <Projects />
           </section>
-          <section id="contact">Contact</section>
+          <section id="contact" className="h-full min-h-screen">
+            <Contact />
+          </section>
         </Container>
       </div>
     </main>
