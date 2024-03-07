@@ -51,8 +51,8 @@ const NavBar = () => {
       className="flex h-[10vh] w-full items-center justify-between"
     >
       {/* LOGO */}
-      <motion.div variants={navBarChildVariants} className="h-auto w-auto">
-        <Link href="/">
+      <motion.div variants={navBarChildVariants}>
+        <Link href="/" className="h-auto w-auto">
           <Image src="/logo-light.svg" alt="logo" width={28} height={28} />
         </Link>
       </motion.div>

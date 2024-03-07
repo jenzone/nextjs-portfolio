@@ -53,6 +53,8 @@ const ProfileImage = () => {
         src="https://avatars.githubusercontent.com/u/113231287?s=400&u=d5756361d7ca19e86b44b75069ddca06283a1e05&v=4"
         alt={'profile picture'}
         fill
+        priority
+        sizes="(min-width: 640px) 320px, 100vw"
         className="aspect-square rounded object-contain"
       />
       <motion.div
@@ -110,7 +112,7 @@ const ProfileContent = () => {
       variants={profileContentVariants}
       initial="hidden"
       animate={controls}
-      className="space-y-8"
+      className="flex flex-col items-start space-y-8"
     >
       <motion.h2
         variants={profileContentChildVariants}

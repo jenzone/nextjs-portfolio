@@ -87,7 +87,7 @@ const Hero = () => {
       variants={heroVariants}
       initial="initial"
       animate="animate"
-      className="static flex h-[90vh] w-full flex-col justify-center space-y-6 pb-[10vh]"
+      className="static flex h-[90vh] w-full flex-col items-start justify-center space-y-6 pb-[10vh]"
     >
       {/* HERO HEADING */}
       <motion.div

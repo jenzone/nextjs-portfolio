@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <section id="hero" className="relative">
-        <Particles />
+        {/* <Particles /> */}
         <div className="relative">
           <Container>
             <NavBar />
