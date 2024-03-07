@@ -6,7 +6,6 @@ import { motion, Variants, useAnimation, useInView } from 'framer-motion'
 
 import ContactForm from '@/components/contact-form'
 import { Heading } from '@/components/ui/heading'
-import Room from '@/libs/room'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -38,28 +37,19 @@ const Contact = () => {
       variants={contactVariants}
       initial="hidden"
       animate={controls}
-      className="items-center justify-between space-x-8 py-16 md:flex"
+      className="flex w-full justify-between space-x-4 py-16"
     >
-      {/* <div className="hidden w-full items-center justify-center md:flex">
-        <div className="relative aspect-square h-full max-h-[400px] w-full max-w-[400px]">
-          <Image
-            src="/contact-logo.png"
-            alt="contact-logo"
-            width={320}
-            height={320}
-            className="relative left-8 top-8 z-10 aspect-square object-contain"
-          />
-          <Image
-            src="/bg-contact-left.png"
-            alt="bg-contact-left"
-            fill
-            sizes="(min-width: 640px) 320px, 100vw"
-            className="aspect-square object-contain"
-          />
-        </div>
-      </div> */}
-      <Room />
-      <div className="flex w-full flex-col justify-center space-y-12">
+      <div className="relative hidden aspect-square h-full w-full md:flex">
+        <Image
+          src="/room.png"
+          alt="room"
+          width={1920}
+          height={1080}
+          priority
+          className="aspect-square object-cover"
+        />
+      </div>
+      <div className="flex w-full flex-col items-center justify-center space-y-12 ">
         <Heading heading="Contact Me" />
         <motion.div variants={contactVariants}>
           <ContactForm />
