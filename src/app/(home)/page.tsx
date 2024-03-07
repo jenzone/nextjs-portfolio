@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import Hero from './section/hero'
 import About from './section/about'
 import Skills from './section/skills'
@@ -9,15 +7,19 @@ import Contact from './section/contact'
 import NavBar from '@/components/navigation/nav-bar'
 import Footer from '@/components/navigation/footer'
 import { Container } from '@/components/ui/container'
+import Particles from '@/libs/particles'
 
 export default function Home() {
   return (
     <main>
-      <section id="hero">
-        <Container>
-          <NavBar />
-          <Hero />
-        </Container>
+      <section id="hero" className="relative">
+        <Particles />
+        <div className="relative">
+          <Container>
+            <NavBar />
+            <Hero />
+          </Container>
+        </div>
       </section>
       <div className="bg-[var(--text-100)] text-[var(--bg-100)]">
         <Container>
