@@ -7,12 +7,13 @@ import Projects from './section/projects'
 import Contact from './section/contact'
 
 import NavBar from '@/components/navigation/nav-bar'
+import Footer from '@/components/navigation/footer'
 import { Container } from '@/components/ui/container'
 
 export default function Home() {
   return (
     <main>
-      <section>
+      <section id="hero">
         <Container>
           <NavBar />
           <Hero />
@@ -29,11 +30,12 @@ export default function Home() {
           <section id="projects" className="h-full min-h-screen">
             <Projects />
           </section>
-          <section id="contact" className="h-full min-h-screen">
+          <section id="contact" className="h-full">
             <Contact />
           </section>
         </Container>
       </div>
+      <Footer />
     </main>
   )
 }
