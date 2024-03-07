@@ -7,10 +7,12 @@ import Contact from './section/contact'
 import NavBar from '@/components/navigation/nav-bar'
 import Footer from '@/components/navigation/footer'
 import { Container } from '@/components/ui/container'
+import BackgroundParticles from '@/components/bg-particles'
 
 export default function Home() {
   return (
     <main>
+      <BackgroundParticles />
       <section id="hero">
         <Container>
           <NavBar />
@@ -18,22 +20,36 @@ export default function Home() {
         </Container>
       </section>
       <div className="bg-[var(--text-100)] text-[var(--bg-100)]">
-        <Container>
-          <section id="about" className="h-full min-h-screen">
+        <section
+          id="about"
+          className="h-full min-h-screen bg-[var(--text-100)]"
+        >
+          <Container>
             <About />
-          </section>
-          <section id="skills" className="h-full min-h-screen">
+          </Container>
+        </section>
+        <section id="skills" className="h-full min-h-screen">
+          <Container>
             <Skills />
-          </section>
-          <section id="projects" className="h-full min-h-screen">
+          </Container>
+        </section>
+        <section
+          id="projects"
+          className="h-full min-h-screen bg-[var(--text-100)]"
+        >
+          <Container>
             <Projects />
-          </section>
-          <section id="contact" className="h-full">
+          </Container>
+        </section>
+        <section id="contact" className="h-full">
+          <Container>
             <Contact />
-          </section>
-        </Container>
+          </Container>
+        </section>
       </div>
-      <Footer />
+      <div className="absolute w-full bg-[var(--bg-100)]">
+        <Footer />
+      </div>
     </main>
   )
 }
