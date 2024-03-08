@@ -134,9 +134,10 @@ const ProfileContent = () => {
         </motion.p>
         <motion.p variants={profileContentChildVariants}>
           💻 I am concentrating and expanding my expertise on software
-          development using modern framework technolgies. I'm looking forward to
-          learning more about other technologies. I am also interested in
-          learning about machine learning and artificial intelligence.
+          development using modern framework technolgies. I&apos;m looking
+          forward to learning more about other technologies. I am also
+          interested in learning about machine learning and artificial
+          intelligence.
         </motion.p>
       </div>
       <motion.div variants={profileContentChildVariants}>
