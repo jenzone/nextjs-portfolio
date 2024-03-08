@@ -122,10 +122,14 @@ const Hero = () => {
       {/* HERO SUBHEADING */}
       <motion.h2
         variants={heroChildVariants}
-        className="cursor-default font-serif text-sm font-semibold uppercase italic text-[var(--accent-200)] sm:text-base"
+        className="w-full max-w-[460px] cursor-default text-sm text-gray-400 sm:text-base"
       >
-        Full Stack Developer{' '}
-        <span className="text-[var(--primary-200)]">|</span> UX Designer
+        A passionate{' '}
+        <span className="font-bold text-[var(--accent-200)]">
+          Full-Stack Developer
+        </span>{' '}
+        from the Philippines who focused on building seamless and interactive
+        applications using modern technologies.
       </motion.h2>
       {/* HERO BUTTONS */}
       <motion.div variants={heroChildVariants}>

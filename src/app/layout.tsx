@@ -21,6 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          href="/logo-filled.svg"
+          type="image/svg+xml"
+          sizes="any"
+        />
+      </head>
       <body className={font.className}>
         <ToastProvider />
         {children}
