@@ -122,24 +122,37 @@ const Hero = () => {
       {/* HERO SUBHEADING */}
       <motion.h2
         variants={heroChildVariants}
-        className="w-full max-w-[460px] cursor-default text-sm text-gray-400 sm:text-base"
+        className="w-full max-w-[440px] cursor-default text-sm text-gray-400 sm:text-base"
       >
-        A passionate{' '}
+        An aspiring{' '}
         <span className="font-bold text-[var(--accent-200)]">
-          Full-Stack Developer
+          Software Developer
         </span>{' '}
         from the Philippines who focused on building seamless and interactive
-        applications using modern technologies.
+        applications using modern technologies.{' '}
+        <span className="text-green-500">
+          Currently available for internship opportunities.
+        </span>
       </motion.h2>
       {/* HERO BUTTONS */}
-      <motion.div variants={heroChildVariants}>
-        <Link href={'/JensonCaparida_Resume.pdf'} target="_blank">
-          <Button>
-            <DocumentArrowDownIcon className="mr-2 size-4" />
-            Resume
-          </Button>
-        </Link>
-      </motion.div>
+      <div className="flex flex-row space-x-4">
+        <motion.div variants={heroChildVariants}>
+          <Link href={'/JensonCaparida_Resume.pdf'} target="_blank">
+            <Button variant="outline">
+              <DocumentArrowDownIcon className="mr-2 size-4" />
+              Connect with me
+            </Button>
+          </Link>
+        </motion.div>
+        <motion.div variants={heroChildVariants}>
+          <Link href={'/JensonCaparida_Resume.pdf'} target="_blank">
+            <Button>
+              <DocumentArrowDownIcon className="mr-2 size-4" />
+              Resume
+            </Button>
+          </Link>
+        </motion.div>
+      </div>
       {/* SOCIAL BAR */}
       <motion.div
         variants={socialChildVariants}

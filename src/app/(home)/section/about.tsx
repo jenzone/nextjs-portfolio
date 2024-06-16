@@ -123,7 +123,7 @@ const ProfileContent = () => {
       </motion.h2>
       <div className="space-y-4 text-justify text-lg">
         <motion.p variants={profileContentChildVariants}>
-          🌟 I&apos;m a Full-Stack Developer from the Philippines with a strong
+          🌟 I&apos;m a Software Developer from the Philippines with a strong
           passion for creating seamless and interactive applications using
           modern technologies.
         </motion.p>
@@ -135,9 +135,9 @@ const ProfileContent = () => {
         <motion.p variants={profileContentChildVariants}>
           💻 I am concentrating and expanding my expertise on software
           development using modern framework technolgies. I&apos;m looking
-          forward to learning more about other technologies. I am also
-          interested in learning about machine learning and artificial
-          intelligence.
+          forward to learning more about other technologies. I am interested in
+          learning about machine learningm, artificial intelligence, and IoT in
+          the future.
         </motion.p>
       </div>
       <motion.div variants={profileContentChildVariants}>
