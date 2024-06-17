@@ -6,6 +6,7 @@ import { DocumentArrowDownIcon } from '@heroicons/react/24/solid'
 
 import { Button } from '@/components/ui/button'
 import { socials } from '@/components/navigation/social'
+import { Link as ScrollLink } from 'react-scroll'
 
 const Hero = () => {
   const firstName = ['J', 'e', 'n', 's', 'o', 'n']
@@ -137,15 +138,16 @@ const Hero = () => {
       {/* HERO BUTTONS */}
       <div className="flex flex-row space-x-4">
         <motion.div variants={heroChildVariants}>
-          <Link href={'/JensonCaparida_Resume.pdf'} target="_blank">
+          <ScrollLink to="contact" smooth={true} duration={500} delay={200}>
             <Button variant="outline">
               <DocumentArrowDownIcon className="mr-2 size-4" />
               Connect with me
             </Button>
-          </Link>
+          </ScrollLink>
+          <Link href={'/JensonCaparida_Resume.pdf'} target="_blank"></Link>
         </motion.div>
         <motion.div variants={heroChildVariants}>
-          <Link href={'/JensonCaparida_Resume.pdf'} target="_blank">
+          <Link href={'/JensonCaparida_ResumeV2.pdf'} target="_blank">
             <Button>
               <DocumentArrowDownIcon className="mr-2 size-4" />
               Resume
