@@ -25,13 +25,16 @@ export async function POST(req: NextRequest) {
   try {
     await transporter.sendMail({
       ...mailOptions,
-      subject: `New Contact Form Inquiry`,
+      from: `${data.name} <${data.email}>`,
+      subject: data.subject,
+      replyTo: data.email,
       html: htmlEmailContent,
     })
 
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error(error)
+
     return NextResponse.json({ success: false }, { status: 500 })
   }
 }

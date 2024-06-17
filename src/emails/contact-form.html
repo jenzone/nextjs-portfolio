@@ -1,18 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Contact Form Submission</title>
   </head>
   <body
     style="
       background-color: #252422;
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      color: #fffcf2;
-      padding: 8px;
       font-family:
         system-ui,
         -apple-system,
@@ -27,25 +22,55 @@
         sans-serif;
     "
   >
-    <h2 style="font-size: x-larger">Contact Form Submission</h2>
-    <hr style="height: 2px; background-color: #0077cc; border: none" />
-    <p style="font-size: medium">
-      <strong style="color: #ff7e3d">Name:</strong> {{name}}
-    </p>
-    <p style="font-size: medium">
-      <strong style="color: #ff7e3d">Email:</strong> {{email}}
-    </p>
-    <p style="font-size: medium">
-      <strong style="color: #ff7e3d">Subject:</strong> {{subject}}
-    </p>
-    <p style="font-size: medium">
-      <strong style="color: #ff7e3d">Message:</strong>
-    </p>
-    <p style="font-size: medium">{{message}}</p>
-    <p style="padding-top: 40px">
-      <small style="font-size: small; color: #ff7e3d">
-        This email was sent from the contact form on your website.
-      </small>
-    </p>
+    <table
+      align="center"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+      style="max-width: 600px"
+    >
+      <tr>
+        <td align="left" valign="top">
+          <div style="width: 100%; max-width: 600px">
+            <!-- image -->
+            <div
+              style="
+                height: 40px;
+                background-color: #0074c8;
+                border-radius: 2px 2px 0 0;
+                padding: 8px;
+                display: flex;
+                align-items: center;
+              "
+            >
+              <h2 style="font-size: large; color: #fff">
+                New Contact Form Inquiry
+              </h2>
+            </div>
+            <!-- form-content -->
+            <div
+              style="
+                background-color: #fffcf2;
+                padding: 8px;
+                border-radius: 0 0 2px 2px;
+                font-size: 16px;
+              "
+            >
+              <p>
+                <span style="font-weight: bold">From: </span>{{name}}
+                &lt;{{email}}&gt;
+              </p>
+              <p style="text-indent: 5em">{{message}}</p>
+              <p style="padding-top: 40px">
+                <small style="font-size: small; color: #ff7e3d">
+                  This email was sent from the contact form on your website.
+                </small>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
