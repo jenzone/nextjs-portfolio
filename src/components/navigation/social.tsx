@@ -17,7 +17,7 @@ export const socials = [
     icon: (
       <SiGithub className="size-8 text-[var(--text-200)] transition-colors duration-300 ease-out hover:text-[var(--accent-200)] 2xl:size-14 " />
     ),
-    href: 'https://github.com/jensoncaparida',
+    href: 'https://github.com/jenzone',
   },
   {
     name: 'LinkedIn',
