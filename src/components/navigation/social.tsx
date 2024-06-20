@@ -24,6 +24,6 @@ export const socials = [
     icon: (
       <SiLinkedin className="size-8 text-[var(--text-200)] transition-colors duration-300 ease-out hover:text-[var(--accent-200)] 2xl:size-14 " />
     ),
-    href: 'https://www.linkedin.com/in/jenson-c-367463251',
+    href: 'https://www.linkedin.com/in/jensoncaparida',
   },
 ]

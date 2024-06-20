@@ -127,7 +127,7 @@ const Hero = () => {
       >
         An aspiring{' '}
         <span className="font-bold text-[var(--accent-200)]">
-          Software Developer
+          Full Stack Developer
         </span>{' '}
         from the Philippines who focused on building seamless and interactive
         applications using modern technologies.{' '}
@@ -146,7 +146,7 @@ const Hero = () => {
           </ScrollLink>
         </motion.div>
         <motion.div variants={heroChildVariants}>
-          <Link href={'/JensonCaparida_ResumeV2_Intern.pdf'} target="_blank">
+          <Link href={'/jensoncaparida-resume.pdf'} target="_blank">
             <Button>
               <DocumentArrowDownIcon className="mr-2 size-4" />
               Resume
