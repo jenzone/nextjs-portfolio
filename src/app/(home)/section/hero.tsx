@@ -1,12 +1,13 @@
 'use client'
 
 import Link from 'next/link'
-import { motion, Variants } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import { DocumentArrowDownIcon } from '@heroicons/react/24/solid'
 
 import { Button } from '@/components/ui/button'
 import { socials } from '@/components/navigation/social'
 import { Link as ScrollLink } from 'react-scroll'
+import { FlipWords } from '@/components/flip-words'
 
 const Hero = () => {
   const firstName = ['J', 'e', 'n', 's', 'o', 'n']
@@ -14,7 +15,7 @@ const Hero = () => {
 
   const heroVariants: Variants = {
     initial: {
-      x: 0.1,
+      x: 0,
     },
     animate: {
       x: 0,
@@ -36,7 +37,7 @@ const Hero = () => {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: 'easeOut',
       },
     },
@@ -62,7 +63,7 @@ const Hero = () => {
     animate: {
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: 'easeOut',
       },
     },
@@ -77,7 +78,7 @@ const Hero = () => {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: 'easeOut',
       },
     },
@@ -88,7 +89,7 @@ const Hero = () => {
       variants={heroVariants}
       initial="initial"
       animate="animate"
-      className="static flex h-[90vh] w-full flex-col items-start justify-center space-y-6 pb-[10vh]"
+      className="static flex h-[90vh] w-full flex-col items-start justify-center space-y-4 pb-[10vh] md:space-y-8"
     >
       {/* HERO HEADING */}
       <motion.div
@@ -97,44 +98,37 @@ const Hero = () => {
         animate="animate"
         className="flex space-x-4"
       >
-        <h1 className="text-4xl font-bold  sm:text-5xl md:text-7xl">
+        <div className="text-4xl font-bold  sm:text-5xl md:text-7xl">
           {firstName.map((letter, index) => (
             <motion.span
               variants={letterChildVariants}
               key={index}
-              className="cursor-default transition-colors duration-500 ease-out hover:text-[var(--primary-200)]"
+              className="cursor-default transition-colors duration-500 ease-out hover:text-[var(--primary)]"
             >
               {letter}
             </motion.span>
           ))}
-        </h1>
-        <h1 className="text-4xl font-bold  sm:text-5xl md:text-7xl">
+        </div>
+        <div className="text-4xl font-bold  sm:text-5xl md:text-7xl">
           {lastName.map((letter, index) => (
             <motion.span
               variants={letterChildVariants}
               key={index}
-              className="cursor-default transition-colors duration-500 ease-out hover:text-[var(--primary-200)]"
+              className="cursor-default transition-colors duration-500 ease-out hover:text-[var(--primary)]"
             >
               {letter}
             </motion.span>
           ))}
-        </h1>
+        </div>
       </motion.div>
       {/* HERO SUBHEADING */}
-      <motion.h2
-        variants={heroChildVariants}
-        className="w-full max-w-[440px] cursor-default text-sm text-gray-400 sm:text-base"
-      >
-        An aspiring{' '}
-        <span className="font-bold text-[var(--accent-200)]">
-          Full Stack Developer
-        </span>{' '}
-        from the Philippines who focused on building seamless and interactive
-        applications using modern technologies.{' '}
-        <span className="text-green-500">
-          Currently available for internship opportunities.
-        </span>
-      </motion.h2>
+      <motion.div variants={heroChildVariants}>
+        <FlipWords
+          className="m-0 p-0 font-serif text-lg uppercase italic"
+          words={['Software Developer', 'UX/UI Designer', 'Automation Tester']}
+          duration={3000}
+        />
+      </motion.div>
       {/* HERO BUTTONS */}
       <div className="flex flex-row space-x-4">
         <motion.div variants={heroChildVariants}>

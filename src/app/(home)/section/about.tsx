@@ -8,6 +8,7 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 
 import { Heading } from '@/components/ui/heading'
 import { Button } from '@/components/ui/button'
+import { Timeline } from '@/components/timeline'
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
         <ProfileImage />
         <ProfileContent />
       </div>
+      <Experience />
     </motion.div>
   )
 }
@@ -47,21 +49,21 @@ const ProfileImage = () => {
   return (
     <motion.div
       ref={ref}
-      className="relative aspect-square h-full w-full md:max-h-[400px] md:max-w-[400px]"
+      className="relative aspect-square h-full w-full md:max-h-[450px] md:max-w-[450px]"
     >
       <Image
         src="https://avatars.githubusercontent.com/u/113231287?s=400&u=d5756361d7ca19e86b44b75069ddca06283a1e05&v=4"
         alt={'profile picture'}
         fill
         priority
-        sizes="(min-width: 640px) 320px, 100vw"
+        sizes="100vw"
         className="aspect-square rounded object-contain"
       />
       <motion.div
         variants={profileImageVariants}
         initial="hidden"
         animate={controls}
-        className="absolute h-full w-full bg-[var(--text-100)]"
+        className="absolute h-full w-full bg-[var(--foreground)]"
       />
     </motion.div>
   )
@@ -112,33 +114,33 @@ const ProfileContent = () => {
       variants={profileContentVariants}
       initial="hidden"
       animate={controls}
-      className="flex flex-col items-start space-y-8"
+      className="flex flex-col items-start space-y-4"
     >
-      <motion.h2
+      <motion.div
         variants={profileContentChildVariants}
         className="text-2xl font-semibold"
       >
         Hi, I&apos;m{' '}
-        <span className="text-[var(--primary-200)]">Jenson Caparida</span>
-      </motion.h2>
-      <div className="space-y-4 text-justify text-lg">
-        <motion.p variants={profileContentChildVariants}>
-          🌟 I&apos;m a Full Stack Developer from the Philippines with a strong
-          passion for learning annd creating seamlessly interactive applications using
-          modern technologies. 
-        </motion.p>
-        <motion.p variants={profileContentChildVariants}>
-          🎓 I currently enrolled at Technological University of the Philippines
-          in Cavite Philippines with a Bachelor of Engineering Technology degree
+        <span className="text-[var(--primary)]">Jenson Caparida</span>
+      </motion.div>
+      <div className="space-y-4 text-justify">
+        <motion.div variants={profileContentChildVariants}>
+          🌟 I&apos;m an aspiring software developer from the Philippines with a
+          strong passion for learning and creating seamlessly interactive
+          applications.
+        </motion.div>
+        <motion.div variants={profileContentChildVariants}>
+          🎓 I graduated at Technological University of the Philippines in
+          Cavite, Philippines with a Bachelor of Engineering Technology degree
           with a major in Computer Engineering Technology.
-        </motion.p>
-        <motion.p variants={profileContentChildVariants}>
-          💻 I am concentrating and expanding my expertise on software
-          development using modern framework technolgies. I&apos;m looking
+        </motion.div>
+        <motion.div variants={profileContentChildVariants}>
+          💻I am concentrating and expanding my expertise on software
+          development using modern framework technologies. I&apos;m looking
           forward to learning more about other technologies. I am interested in
-          learning about machine learning, artificial intelligence, and IoT in
-          the future.
-        </motion.p>
+          learning about machine learning, generative artificial intelligence,
+          and IoT in the future.
+        </motion.div>
       </div>
       <motion.div variants={profileContentChildVariants}>
         <Link
@@ -152,6 +154,28 @@ const ProfileContent = () => {
         </Link>
       </motion.div>
     </motion.div>
+  )
+}
+
+const Experience = () => {
+  return (
+    <div className="w-full max-w-[600px] space-y-8">
+      <div className="text-xl font-semibold uppercase">Experience</div>
+      {/* timeline */}
+      <div className="px-1">
+        <Timeline
+          role="QA SDET Intern"
+          from="Jul 2024"
+          to="Nov 2024"
+          experiences={[
+            'Conducted functional testing for web applications of the company.',
+            'Collaborated with the team in daily stand-ups, sprint planning, grooming, retrospective as part of an Agile Scrum team.',
+            'Updated existing automation scripts using pytest and selenium.',
+            'Explored AI tools for use by the QA team to enhance efficiency and documented the findings',
+          ]}
+        />
+      </div>
+    </div>
   )
 }
 

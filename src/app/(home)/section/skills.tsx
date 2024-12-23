@@ -14,8 +14,7 @@ import { Heading } from '@/components/ui/heading'
 
 import { skills } from '@/data/skills-sets'
 
-interface SkillSets {
-  id: number
+interface ISkillSets {
   name: string
   category: string
   icon?: React.ComponentType<any> | null
@@ -34,7 +33,15 @@ const Skills = () => {
       ? skills
       : skills.filter((skill) => skill.category.includes(selectedTab))
 
-  const tab = ['All', 'languages', 'design', 'frontend', 'backend', 'other']
+  const tab = [
+    'All',
+    'languages',
+    'design',
+    'frontend',
+    'backend',
+    'automation',
+    'other',
+  ]
 
   useEffect(() => {
     if (isInView) {
@@ -85,7 +92,7 @@ const Skills = () => {
             key={item}
             variants={skillChildVariants}
             onClick={() => setSelectedTab(item)}
-            className={`${selectedTab === item ? 'tab text-[var(--primary-200)]' : ''} hover:text-primary-200 cursor-pointer font-medium capitalize outline-none transition-colors duration-300`}
+            className={`${selectedTab === item ? 'tab text-[var(--primary)]' : ''} hover:text-primary-200 cursor-pointer font-medium capitalize outline-none transition-colors duration-300`}
           >
             {item}
           </motion.button>
@@ -99,8 +106,8 @@ const Skills = () => {
           className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6"
         >
           <AnimatePresence>
-            {filteredSkills.map((skill) => (
-              <SkillSets key={skill.id} skill={skill} />
+            {filteredSkills.map((skill, index) => (
+              <SkillSets key={index} skill={skill} />
             ))}
           </AnimatePresence>
         </motion.div>
@@ -109,7 +116,7 @@ const Skills = () => {
   )
 }
 
-const SkillSets = ({ skill }: { skill: SkillSets }) => {
+const SkillSets = ({ skill }: { skill: ISkillSets }) => {
   const skillSetsVariants: Variants = {
     initial: {
       opacity: 0,
@@ -134,10 +141,10 @@ const SkillSets = ({ skill }: { skill: SkillSets }) => {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="tab-panel hover:text-text-100 w-50 h-50 flex h-full w-full flex-col items-center justify-center space-y-2 whitespace-nowrap rounded-lg border border-[var(--text-200)] p-4 text-sm shadow-xl transition-colors duration-300 hover:text-[var(--text-100)]"
+      className="w-50 h-50 flex h-full w-full flex-col items-center justify-center space-y-2 whitespace-nowrap rounded-lg p-4 text-sm"
     >
-      <span className="relative z-10">{skill.icon && <skill.icon />}</span>
-      <span className="relative z-10">{skill.name}</span>
+      <div className="relative z-10">{skill.icon && <skill.icon />}</div>
+      <div className="relative z-10">{skill.name}</div>
     </motion.div>
   )
 }

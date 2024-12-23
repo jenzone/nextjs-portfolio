@@ -8,11 +8,11 @@ import {
   MoveDirection,
   OutMode,
 } from '@tsparticles/engine'
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-import { loadFull } from 'tsparticles' // if you are going to use `loadFull`, install the "tsparticles" package too.
-// import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
-import particlesConfig from '@/config/particles.json'
+// import { loadAll } from "@tsparticles/all"; // if `loadAll`, install the "@tsparticles/all" package too.
+import { loadFull } from 'tsparticles' // if `loadFull`, install the "tsparticles" package too.
+// import { loadSlim } from "@tsparticles/slim"; // if`loadSlim`, install the "@tsparticles/slim" package too.
+// import { loadBasic } from "@tsparticles/basic"; // if `loadBasic`, install the "@tsparticles/basic" package too.
+import particlesConfig from '@/config/particles-nasa.json' // change type of particles on @/config directory
 
 const BackgroundParticles = () => {
   const [init, setInit] = useState(false)
@@ -20,9 +20,9 @@ const BackgroundParticles = () => {
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
+      // initiate the tsParticles instance (engine) here, adding custom shapes or presets
+      // loads the tsparticles package bundle, it's the easiest method for getting everything ready
+      // starting from v2 it can add only the features you need reducing the bundle size
       //await loadAll(engine);
       await loadFull(engine)
       // await loadSlim(engine)

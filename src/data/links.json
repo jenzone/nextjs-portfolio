@@ -1,6 +1,11 @@
 [
-  { "id": "about", "label": "About" },
-  { "id": "skills", "label": "Skills" },
-  { "id": "projects", "label": "Projects" },
-  { "id": "contact", "label": "Contact" }
+  { "id": "about", "label": "About", "link": "about" },
+  { "id": "skills", "label": "Skills", "link": "skills" },
+  { "id": "projects", "label": "Projects", "link": "projects" },
+  {
+    "id": "resources",
+    "label": "Resources",
+    "link": "https://jz-resource-hub.vercel.app/"
+  },
+  { "id": "contact", "label": "Contact", "link": "contact" }
 ]

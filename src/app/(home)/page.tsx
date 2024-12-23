@@ -19,10 +19,10 @@ export default function Home() {
           <Hero />
         </Container>
       </section>
-      <div className="bg-[var(--text-100)] text-[var(--bg-100)]">
+      <div className="bg-[var(--foreground)] text-[var(--background)]">
         <section
           id="about"
-          className="h-full min-h-screen bg-[var(--text-100)]"
+          className="h-full min-h-screen bg-[var(--foreground)]"
         >
           <Container>
             <About />
@@ -35,7 +35,7 @@ export default function Home() {
         </section>
         <section
           id="projects"
-          className="h-full min-h-screen bg-[var(--text-100)]"
+          className="h-full min-h-screen bg-[var(--foreground)]"
         >
           <Container>
             <Projects />
@@ -47,7 +47,7 @@ export default function Home() {
           </Container>
         </section>
       </div>
-      <div className="absolute w-full bg-[var(--bg-100)]">
+      <div className="absolute w-full bg-[var(--background)]">
         <Footer />
       </div>
     </main>

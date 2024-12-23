@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Image from 'next/image'
+
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import { ChevronLeftIcon } from '@heroicons/react/24/solid'
 
@@ -22,35 +24,43 @@ interface ProjectContentProps {
 const ProjectContent: React.FC<ProjectContentProps> = ({ data }) => {
   return (
     <div className="space-y-8 py-20">
-      <div className="flex">
+      <div className="flex justify-between">
+        <div className="text-2xl font-semibold uppercase">{data.name}</div>
         <Link href="/projects">
-          <Button>
-            <ChevronLeftIcon className="size-8" />
+          <Button className="space-x-4 text-sm">
+            <ChevronLeftIcon className="mr-2 size-4" />
+            Back to projects
           </Button>
         </Link>
       </div>
-      <h2 className="text-2xl font-semibold uppercase">{data.name}</h2>
-      <div className="relative flex h-[400px] w-full items-center justify-center rounded-lg border-2 border-[var(--primary-200)] bg-[var(--primary-200)] md:h-[500px] lg:px-36">
-        <iframe
+      <div className="relative flex h-[400px] w-full items-center justify-center rounded-lg border-2 border-[var(--primary)] bg-[var(--primary)] md:h-[500px] lg:px-36">
+        {/* <iframe
           src={data.figma_link}
           allowFullScreen
           className="h-full w-full rounded-md"
+        /> */}
+        <Image
+          src={`/projects/${data.img}`}
+          alt={data.name + ' Image'}
+          fill
+          sizes="100vw"
+          className="object-contain"
         />
       </div>
       <div className="space-y-4">
-        <p>
-          <span className="font-medium uppercase text-[var(--primary-200)]">
+        <div>
+          <span className="font-medium uppercase text-[var(--primary-light)]">
             Description:{' '}
           </span>
           {data.description}
-        </p>
+        </div>
         <div className="flex space-x-4">
-          <p>
-            <span className="font-medium uppercase text-[var(--primary-200)]">
+          <div>
+            <span className="font-medium uppercase text-[var(--primary-light)]">
               Tech Stacks:{' '}
             </span>
             {data.techstack.join(', ')}
-          </p>
+          </div>
         </div>
       </div>
       <div className="flex space-x-4">

@@ -34,7 +34,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
   const projectCardVariants: Variants = {
     hidden: {
-      y: -0.1,
+      y: 0,
     },
     visible: {
       y: 0,
@@ -78,7 +78,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           variants={projectCardVariants}
           initial="hidden"
           animate={controls}
-          className="group cursor-pointer space-y-4 rounded-lg border-2 border-[var(--text-200)] p-4 shadow-lg transition duration-500 ease-out hover:border-[var(--primary-200)]"
+          className="group cursor-pointer space-y-4 rounded-lg border-2 border-[var(--foreground-muted)] p-4 shadow-lg transition duration-500 ease-out hover:border-[var(--primary)]"
         >
           <motion.div className="relative aspect-video h-auto w-auto">
             <Image
@@ -89,7 +89,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             />
             <motion.div
               variants={projectCardImageVariants}
-              className="absolute h-full w-full bg-[var(--text-100)]"
+              className="absolute h-full w-full bg-[var(--foreground)]"
             />
           </motion.div>
           <motion.div className="space-y-4">
@@ -97,16 +97,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               variants={projectCardChildVariants}
               className="flex items-center justify-between"
             >
-              <h2 className="text-xl font-bold">{name}</h2>
+              <div className="whitespace-nowrap text-xl font-bold">
+                {name.length > 20 ? name.slice(0, 20) + '...' : name}
+              </div>
               <span className="arrow">
-                <ArrowRightIcon className="social size-6 transform duration-300 ease-out will-change-transform group-hover:-rotate-45 group-hover:scale-90 group-hover:text-[var(--text-100)]" />
+                <ArrowRightIcon className="social size-6 transform duration-300 ease-out will-change-transform group-hover:-rotate-45 group-hover:scale-90 group-hover:text-[var(--foreground)]" />
               </span>
             </motion.div>
-            <motion.p variants={projectCardChildVariants}>
+            <motion.div variants={projectCardChildVariants}>
               {description.length > 70
                 ? `${description.slice(0, 70)}...`
                 : description}
-            </motion.p>
+            </motion.div>
             <motion.ul
               variants={projectCardChildVariants}
               className="scrollbar flex space-x-2 overflow-x-auto"
@@ -114,7 +116,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               {techstack.map((tech) => (
                 <li
                   key={tech}
-                  className="mb-4 whitespace-nowrap rounded-md border border-[var(--primary-200)] px-2 py-1 text-xs text-[var(--primary-200)]"
+                  className="mb-4 whitespace-nowrap rounded-md border border-[var(--primary)] px-2 py-1 text-xs text-[var(--primary)]"
                 >
                   {tech}
                 </li>

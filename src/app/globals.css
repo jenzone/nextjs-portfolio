@@ -3,14 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --primary-100: #004e98;
+  /* --primary-100: #004e98;
   --primary-200: #0077cc;
   --accent-100: #eb5e28;
   --accent-200: #ff7e3d;
-  --text-100: #fffcf2;
+  --text-100: #f7f7f7;
   --text-200: #ccc5b9;
-  --bg-100: #252422;
-  --bg-200: #403d39;
+  --bg-100: #2a2a28;
+  --bg-200: #403d39; */
+
+  --primary: #3f7c85;
+  --primary-light: #00ccbf;
+  --accent: #ff5f5d;
+  --foreground: #f7f7f7;
+  --foreground-muted: #b2bebf;
+  --background: #16232e;
+  --background-muted: #747e7e;
 }
 
 * {
@@ -20,8 +28,8 @@
 }
 
 body {
-  color: var(--text-100);
-  background: var(--bg-100);
+  color: var(--foreground);
+  background: var(--background);
 }
 
 section {
@@ -43,11 +51,11 @@ section {
   left: 50%;
   width: 0;
   height: 0;
-  background-color: var(--text-100);
+  background-color: var(--foreground);
   border-radius: 50%;
   transition:
-    width 0.3s ease-in-out,
-    height 0.3s ease-in-out;
+    width 0.2s ease-in-out,
+    height 0.2s ease-in-out;
   z-index: -2;
   transform: translate(-50%, -50%);
 }
@@ -70,7 +78,7 @@ section {
   bottom: -10px;
   left: 0;
   border-radius: 50px;
-  background-color: var(--primary-200);
+  background-color: var(--primary);
 }
 
 /* TAB ANIMATION */
@@ -86,7 +94,7 @@ section {
   bottom: -4px;
   left: 0;
   border-radius: 250px;
-  background-color: var(--primary-200);
+  background-color: var(--primary);
 }
 
 /* TAB-PANEL ANIMATION */
@@ -102,11 +110,11 @@ section {
   left: 50%;
   width: 0;
   height: 0;
-  background-color: var(--accent-200);
+  background-color: var(--accent);
   border-radius: 8px;
   transition:
-    width 0.4s ease-in-out,
-    height 0.4s ease-in-out;
+    width 0.3s ease-in-out,
+    height 0.3s ease-in-out;
   z-index: 0;
   transform: translate(-50%, -50%);
 }
@@ -119,7 +127,7 @@ section {
 /* SCROLLBAR */
 .scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-200) #eeecec;
+  scrollbar-color: var(--primary) #eeecec;
 }
 
 /* ARROW ANIMATION PRODUCT CARD */
@@ -134,7 +142,7 @@ section {
   left: 50%;
   width: 0;
   height: 0;
-  background-color: var(--primary-200);
+  background-color: var(--primary);
   border-radius: 50%;
   transition:
     width 0.3s ease-in-out,

@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     process.cwd(),
     'src',
     'emails',
-    'contact-form.html',
+    'contact-form_v2.html',
   )
 
   const template = fs.readFileSync(templatePath, 'utf-8')

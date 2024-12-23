@@ -53,25 +53,36 @@ const NavBar = () => {
       {/* LOGO */}
       <motion.div variants={navBarChildVariants}>
         <Link href="/" className="h-auto w-auto">
-          <Image src="/logo-light.svg" alt="logo" width={28} height={28} />
+          <Image src="/logo-light.svg" alt="logo" width={32} height={32} />
         </Link>
       </motion.div>
       {/* LINKS */}
       <motion.div className="hidden flex-row space-x-6 sm:flex">
         {links.map((item) => (
-          <motion.span
+          <motion.div
             key={item.id}
             variants={navBarChildVariants}
-            className="cursor-pointer font-bold text-neutral-400 transition-colors duration-300 ease-out hover:text-[var(--accent-200)]"
+            className="cursor-pointer text-lg font-bold text-neutral-400 transition-colors duration-300 ease-out hover:text-[var(--accent)]"
           >
             {isHomePage ? (
-              <ScrollLink to={item.id} smooth={true} duration={500} delay={200}>
-                {item.label}
-              </ScrollLink>
+              item.id === 'resources' ? (
+                <Link href={item.link} target="_blank">
+                  {item.label}
+                </Link>
+              ) : (
+                <ScrollLink
+                  to={item.link}
+                  smooth={true}
+                  duration={500}
+                  delay={200}
+                >
+                  {item.label}
+                </ScrollLink>
+              )
             ) : (
               <Link href="/">{item.label}</Link>
             )}
-          </motion.span>
+          </motion.div>
         ))}
       </motion.div>
       {/* TOGGLE SIDEBAR*/}

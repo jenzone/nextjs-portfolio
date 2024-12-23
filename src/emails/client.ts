@@ -28,5 +28,6 @@ transporter.verify(function (error, success) {
 })
 
 export const mailOptions = {
+  from: senderEmail,
   to: myEmail,
 }

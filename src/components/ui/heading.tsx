@@ -38,21 +38,21 @@ export const Heading: React.FC<HeadingProps> = ({ heading }) => {
       className="relative flex items-center justify-center"
     >
       {/* heading shadow */}
-      <span
+      <div
         style={{
           background:
             'linear-gradient(to bottom, rgba(37,36,34,1), rgba(204,197,185,1))',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
         }}
-        className="text absolute -top-4 whitespace-nowrap text-4xl font-bold opacity-40 sm:text-5xl"
+        className="text absolute -top-4 cursor-default whitespace-nowrap text-4xl font-bold opacity-40 sm:text-5xl"
       >
         {heading}
-      </span>
+      </div>
       {/* heading */}
-      <h1 className="heading flex items-center justify-center text-3xl font-bold sm:text-4xl">
+      <div className="heading flex cursor-default items-center justify-center text-3xl font-bold sm:text-4xl">
         {heading}
-      </h1>
+      </div>
     </motion.div>
   )
 }

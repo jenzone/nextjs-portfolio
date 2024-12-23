@@ -13,24 +13,9 @@ export default function HomeLayout({
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 2000)
-
+    const timer = setTimeout(() => setLoading(false), 1000)
     return () => clearTimeout(timer)
   }, [])
-
-  if (loading) {
-    return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <Loading />
-      </motion.div>
-    )
-  }
 
   return (
     <motion.div
@@ -38,7 +23,7 @@ export default function HomeLayout({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {children}
+      {loading ? <Loading /> : children}
     </motion.div>
   )
 }

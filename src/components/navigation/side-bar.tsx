@@ -120,11 +120,11 @@ const SideBar = () => {
   return (
     <motion.div initial="closed" animate={open ? 'open' : 'closed'}>
       <motion.div
-        className="absolute bottom-0 left-0 top-0 z-50 w-full bg-gradient-to-r from-[var(--accent-100)] to-[var(--accent-200)]"
+        className="absolute bottom-0 left-0 top-0 z-50 w-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent)]"
         variants={beforeSideBarOpen}
       />
       <motion.div
-        className="absolute bottom-0 left-0 top-0 z-50 flex w-full flex-col justify-center space-y-28 bg-gradient-to-r from-[var(--primary-100)] to-[var(--primary-200)] px-12"
+        className="absolute bottom-0 left-0 top-0 z-50 flex w-full flex-col justify-center space-y-28 bg-gradient-to-r from-[var(--background)] to-[var(--primary)] px-12"
         variants={sideBar}
       >
         {/* LINKS */}
@@ -135,25 +135,31 @@ const SideBar = () => {
           className="flex flex-col space-y-4"
         >
           {links.map((item) => (
-            <motion.span
+            <motion.div
               key={item.id}
               variants={linksChildVariants}
-              className="cursor-pointer text-5xl font-medium transition-colors duration-300 ease-out hover:text-[var(--accent-200)]"
+              className="cursor-pointer text-5xl font-medium transition-colors duration-300 ease-out hover:text-[var(--accent)]"
             >
               {isHomePage ? (
-                <ScrollLink
-                  to={item.id}
-                  smooth={true}
-                  duration={500}
-                  delay={1000}
-                  onClick={() => setOpen && setOpen(false)}
-                >
-                  {item.label}
-                </ScrollLink>
+                item.id === 'resources' ? (
+                  <Link href={item.link} target="_blank">
+                    {item.label}
+                  </Link>
+                ) : (
+                  <ScrollLink
+                    to={item.id}
+                    smooth={true}
+                    duration={500}
+                    delay={1000}
+                    onClick={() => setOpen && setOpen(false)}
+                  >
+                    {item.label}
+                  </ScrollLink>
+                )
               ) : (
                 <Link href="/">{item.label}</Link>
               )}
-            </motion.span>
+            </motion.div>
           ))}
         </motion.div>
         {/* SOCIALS */}

@@ -62,5 +62,38 @@
       "live": "https://pet-carrier-rms.vercel.app/"
     },
     "figma_link": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FP4x7CObhuayuJrPPuMkSlO%2FPCRS%3Fnode-id%3D0-1%26t%3Dsk4ADw3marjmCZ5e-1"
+  },
+  {
+    "id": "jz-resource-hub",
+    "name": "JZ Resource Hub",
+    "description": "A personal collection of tools, resources, guides and links to enhance productivity and streamline workflows by Me(@Jenzone)",
+    "img": "jz-resource-hub.png",
+    "techstack": ["Next JS", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+    "featured": true,
+    "links": {
+      "github": "https://github.com/jenzone/jz-resource-hub",
+      "live": "https://jz-resource-hub.vercel.app/"
+    },
+    "figma_link": ""
+  },
+  {
+    "id": "ims",
+    "name": "Inventory Management System",
+    "description": "Inventory Management System (IMS) using Node.js, Express, MongoDB, and EJS. The final project for backend training by Bayan Academy",
+    "img": "ims.png",
+    "techstack": [
+      "Node JS",
+      "JavaScript",
+      "Express",
+      "EJS",
+      "MongoDB",
+      "Tailwind CSS"
+    ],
+    "featured": true,
+    "links": {
+      "github": "https://github.com/jenzone/inventory-management-system",
+      "live": "https://inventory-management-system-x7n2.onrender.com/"
+    },
+    "figma_link": ""
   }
 ]

@@ -16,7 +16,7 @@ type FormData = {
 }
 
 const schema = yup.object({
-  name: yup.string(),
+  name: yup.string().required(),
   email: yup.string().email().required(),
   subject: yup.string().required(),
   message: yup.string().required(),
@@ -52,29 +52,29 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-4">
       <input
         {...register('name')}
-        placeholder="Name"
+        placeholder="Name *"
         type="text"
-        className="w-full border-b-2 border-[var(--primary-200)] bg-transparent py-2 text-[var(--bg-100)] caret-[var(--primary-200)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent-200)]"
+        className={`${errors.name ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-[var(--primary)] bg-transparent py-2 text-[var(--background)] caret-[var(--primary)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent)]`}
       />
 
       <input
         {...register('email')}
         placeholder="Email *"
         type="email"
-        className={`${errors.email ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-[var(--primary-200)] bg-transparent py-2 text-[var(--bg-100)] caret-[var(--primary-200)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent-200)]`}
+        className={`${errors.email ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-[var(--primary)] bg-transparent py-2 text-[var(--background)] caret-[var(--primary)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent)]`}
       />
 
       <input
         {...register('subject')}
         placeholder="Subject *"
         type="text"
-        className={`${errors.subject ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-[var(--primary-200)] bg-transparent py-2 text-[var(--bg-100)] caret-[var(--primary-200)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent-200)]`}
+        className={`${errors.subject ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-[var(--primary)] bg-transparent py-2 text-[var(--background)] caret-[var(--primary)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent)]`}
       />
 
       <textarea
         {...register('message')}
         placeholder="Message *"
-        className={`${errors.message ? 'border-red-500 placeholder-red-400' : ''} h-full max-h-[250px] min-h-[100px] w-full border-b-2 border-[var(--primary-200)] bg-transparent py-2 text-[var(--bg-100)] caret-[var(--primary-200)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent-200)]`}
+        className={`${errors.message ? 'border-red-500 placeholder-red-400' : ''} h-full max-h-[250px] min-h-[100px] w-full border-b-2 border-[var(--primary)] bg-transparent py-2 text-[var(--background)] caret-[var(--primary)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent)]`}
       />
       <Button className="mt-4" type="submit">
         Send <PaperAirplaneIcon className="ml-2 size-4" />

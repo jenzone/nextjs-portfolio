@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+
 import { useEffect, useRef } from 'react'
 import { motion, Variants, useAnimation, useInView } from 'framer-motion'
 
@@ -49,7 +50,7 @@ const Contact = () => {
           className="aspect-square object-cover"
         />
       </div>
-      <div className="flex w-full flex-col items-center justify-center space-y-12 bg-[var(--text-100)]">
+      <div className="flex w-full flex-col items-center justify-center space-y-12 bg-[var(--foreground)]">
         <Heading heading="Contact Me" />
         <motion.div variants={contactVariants}>
           <ContactForm />
