@@ -6,7 +6,7 @@ import { ToastProvider } from '@/providers/toast-provider'
 
 const font = Overpass({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
+  weight: ['400', '500', '700'],
 })
 
 export const metadata: Metadata = {

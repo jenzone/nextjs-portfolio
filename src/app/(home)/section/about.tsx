@@ -159,7 +159,7 @@ const ProfileContent = () => {
 
 const Experience = () => {
   return (
-    <div className="w-full max-w-[600px] space-y-8">
+    <div className="w-full max-w-[800px] space-y-8">
       <div className="text-xl font-semibold uppercase">Experience</div>
       {/* timeline */}
       <div className="px-1">
@@ -167,6 +167,7 @@ const Experience = () => {
           role="QA SDET Intern"
           from="Jul 2024"
           to="Nov 2024"
+          company="E-Science Corporation (Alabang, Muntinlupa City, Metro Manila)"
           experiences={[
             'Conducted functional testing for web applications of the company.',
             'Collaborated with the team in daily stand-ups, sprint planning, grooming, retrospective as part of an Agile Scrum team.',

@@ -21,7 +21,7 @@
   {
     "id": "ecommerce-admin",
     "name": "E-commerce Admin",
-    "description": "A full-stack e-commerce admin app that users can create, manage, and link their online stores with various APIU+2019s.",
+    "description": "A full-stack e-commerce admin app that users can create, manage, and link their online stores with various APIs",
     "img": "ecommerce-admin.png",
     "techstack": [
       "Next JS",
@@ -42,7 +42,7 @@
   {
     "id": "pcrs",
     "name": "Pet Carrier Rental System",
-    "description": "Our undergraduate thesis project, an Iot-based pet carrier rental system for malls that allows pet owners to rent pet carriers for their pets and track their location in real-time.",
+    "description": "A pet carrier rental system for malls that allows pet owners to rent pet carriers for their pets. Administrators can track their location in real-time. Our undergraduate thesis project.",
     "img": "pcrs.png",
     "techstack": [
       "Node JS",
@@ -66,7 +66,7 @@
   {
     "id": "jz-resource-hub",
     "name": "JZ Resource Hub",
-    "description": "A personal collection of tools, resources, guides and links to enhance productivity and streamline workflows by Me(@Jenzone)",
+    "description": "A personal collection of tools, resources, guides and links by Jenson Caparida(@Jenzone)",
     "img": "jz-resource-hub.png",
     "techstack": ["Next JS", "TypeScript", "Tailwind CSS", "Shadcn UI"],
     "featured": true,
