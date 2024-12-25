@@ -164,7 +164,7 @@ const Experience = () => {
       <div className="px-1">
         <Timeline
           role="QA SDET Intern"
-          from="Jul 2024"
+          from="Jul"
           to="Nov 2024"
           company="E-Science Corporation (Alabang, Muntinlupa City, Metro Manila)"
           experiences={[

@@ -89,7 +89,7 @@ const Hero = () => {
       variants={heroVariants}
       initial="initial"
       animate="animate"
-      className="static flex h-[90vh] w-full flex-col items-start justify-center space-y-4 pb-[10vh] md:space-y-8"
+      className="static flex h-[90vh] w-full flex-col items-start justify-center space-y-3 pb-[10vh] md:space-y-5"
     >
       {/* HERO HEADING */}
       <motion.div
@@ -122,15 +122,15 @@ const Hero = () => {
         </div>
       </motion.div>
       {/* HERO SUBHEADING */}
-      <motion.div variants={heroChildVariants}>
+      <motion.div variants={heroChildVariants} className="relative h-[28px]">
         <FlipWords
-          className="m-0 p-0 font-serif text-lg uppercase italic"
+          className="absolute m-0 whitespace-nowrap p-0 font-serif text-lg uppercase italic"
           words={['Software Developer', 'UX/UI Designer', 'Automation Tester']}
           duration={3000}
         />
       </motion.div>
       {/* HERO BUTTONS */}
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row space-x-4 pt-2">
         <motion.div variants={heroChildVariants}>
           <ScrollLink to="contact" smooth={true} duration={500} delay={200}>
             <Button variant="outline">
