@@ -14,12 +14,19 @@ export const metadata: Metadata = {
     template: '%s | Jenson Caparida',
     default: 'Jenson Caparida',
   },
-  description: 'An aspiring Software Developer from Philippines.',
-  keywords: ['jenson caparida', 'jenzone', 'portfolio', 'software development'],
+  description: 'An aspiring Software Engineer from Philippines.',
+  keywords: [
+    'jenson caparida',
+    'jenzone',
+    'portfolio',
+    'software engineer',
+    'software developer',
+    'software development',
+  ],
   metadataBase: new URL('https://jensoncaparida.me'),
   openGraph: {
     title: 'Jenson Caparida',
-    description: 'An aspiring Software Developer from Philippines.',
+    description: 'An aspiring Software Engineer from the Philippines.',
     type: 'website',
     url: 'https://jensoncaparida.me',
     images: ['/meta-card.png'],
@@ -27,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Jenson Caparida',
-    description: 'An aspiring Software Developer from Philippines.',
+    description: 'An aspiring Software Engineer from the Philippines.',
     images: ['/meta-card.png'],
   },
 }

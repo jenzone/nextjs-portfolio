@@ -125,13 +125,14 @@ const ProfileContent = () => {
       </motion.div>
       <div className="space-y-4 text-justify">
         <motion.div variants={profileContentChildVariants}>
-          🌟 An aspiring software developer from the Philippines with a strong
-          passion for learning and creating seamlessly interactive applications.
+          🌟 An aspiring Software Engineer from the Philippines with a strong
+          passion for learning, designing and creating seamlessly interactive
+          applications.
         </motion.div>
         <motion.div variants={profileContentChildVariants}>
-          🎓 I graduated at Technological University of the Philippines in
-          Cavite, Philippines with a Bachelor of Engineering Technology degree
-          with a major in Computer Engineering Technology.
+          🎓 I am graduating student at Technological University of the
+          Philippines in Cavite, Philippines with a Bachelor of Engineering
+          Technology degree with a major in Computer Engineering Technology.
         </motion.div>
         <motion.div variants={profileContentChildVariants}>
           💻I am concentrating and expanding my expertise on software
