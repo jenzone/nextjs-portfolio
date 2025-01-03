@@ -127,7 +127,7 @@ const ProfileContent = () => {
         <motion.div variants={profileContentChildVariants}>
           🌟 An aspiring Software Engineer from the Philippines with a strong
           passion for learning, designing and creating seamlessly interactive
-          applications.
+          and scalable applications.
         </motion.div>
         <motion.div variants={profileContentChildVariants}>
           🎓 I am graduating student at Technological University of the
