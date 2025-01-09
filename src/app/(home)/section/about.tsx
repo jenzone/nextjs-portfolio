@@ -175,6 +175,17 @@ const Experience = () => {
             'Explored AI tools for use by the QA team to enhance efficiency and documented the findings',
           ]}
         />
+        <Timeline
+          role="Work Immersion Trainee"
+          from="Jul 2019"
+          to="10 days"
+          company="Creotec Philippines Inc. (Dasmariñas, Cavite)"
+          experiences={[
+            'Assembled semiconductor components according to technical guidelines.',
+            'Tested and inspected components to ensure functionality and quality of each component.',
+            'Followed safety protocols and cleanroom procedures during assembly and testing processes.',
+          ]}
+        />
       </div>
     </div>
   )
