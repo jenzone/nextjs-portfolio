@@ -23,36 +23,21 @@ export async function POST(req: NextRequest) {
     .replace(/{{message}}/g, data.message)
 
   try {
-    await transporter.sendMail(
-      {
-        ...mailOptions,
-        // from: `${data.name} <${data.email}>`,
-        subject: data.subject,
-        replyTo: data.email,
-        html: htmlEmailContent,
-      },
-      (error, info) => {
-        if (error) {
-          console.error('Error: ', error)
-          return NextResponse.json({
-            status: 500,
-            success: false,
-            errorMessage: error,
-          })
-        } else {
-          console.log('Email sent!')
-        }
-      },
-    )
+    await transporter.sendMail({
+      ...mailOptions,
+      subject: data.subject,
+      replyTo: data.email,
+      html: htmlEmailContent,
+    })
 
+    console.log('Email sent successfully')
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error(error)
-
+    console.error('Error sending email:', error)
     return NextResponse.json({
       status: 500,
       success: false,
-      errorMessage: error,
+      error: error,
     })
   }
 }
