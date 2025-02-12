@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
       },
       (error, info) => {
         if (error) {
-          console.log('Error: ', error)
+          console.error('Error: ', error)
         } else {
           console.log('Email sent!')
         }

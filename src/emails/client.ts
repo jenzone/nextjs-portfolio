@@ -9,13 +9,10 @@ export const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
   port: process.env.EMAIL_PORT,
   service: process.env.EMAIL_SERVICE,
-  secure: true,
+  secure: false,
   auth: {
     user: username,
     pass,
-  },
-  tls: {
-    ciphers: 'SSLv3',
   },
 } as nodemailer.TransportOptions)
 
