@@ -8,7 +8,7 @@ const pass = process.env.EMAIL_PASSWORD
 export const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
   port: process.env.EMAIL_PORT,
-  service: 'Mailgun',
+  service: process.env.EMAIL_SERVICE,
   secure: true,
   auth: {
     user: username,
