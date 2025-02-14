@@ -125,9 +125,10 @@ const ProfileContent = () => {
       </motion.div>
       <div className="space-y-4 text-justify">
         <motion.div variants={profileContentChildVariants}>
-          🌟 An aspiring Software Engineer from the Philippines with a strong
-          passion for learning, designing and creating seamlessly interactive
-          and scalable applications.
+          🌟 An aspiring software engineer with a strong passion for learning,
+          designing and developing seamlessly interactive, scalable, and
+          efficient applications, focusing on web technologies and user
+          experience.
         </motion.div>
         <motion.div variants={profileContentChildVariants}>
           🎓 I am graduating student at Technological University of the
