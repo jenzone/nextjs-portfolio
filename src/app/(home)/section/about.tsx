@@ -170,7 +170,7 @@ const Experience = () => {
           to="Nov 2024"
           company="E-Science Corporation (Alabang, Muntinlupa City, Metro Manila)"
           experiences={[
-            'Conducted functional testing for web applications of the company.',
+            'Performed functional testing on the companys web application.',
             'Participated in daily stand-ups, sprint planning, grooming, retrospective as part of an Agile Scrum team.',
             'Updated existing automation scripts using pytest and selenium.',
             'Explored AI tools for use by the QA team to enhance efficiency and documented the findings',
