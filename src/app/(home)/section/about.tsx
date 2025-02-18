@@ -136,9 +136,9 @@ const ProfileContent = () => {
           Technology degree with a major in Computer Engineering Technology.
         </motion.div>
         <motion.div variants={profileContentChildVariants}>
-          💻I am concentrating and expanding my expertise on software
-          development using modern framework technologies. I&apos;m looking
-          forward to learning more about other technologies. I am interested in
+          💻Currently, I am focusing and expanding my expertise on software
+          development using modern technologies. I&apos;m looking forward to
+          learning more about other technologies. I am also interested in
           learning about machine learning, generative artificial intelligence,
           and IoT in the future.
         </motion.div>
@@ -171,7 +171,7 @@ const Experience = () => {
           company="E-Science Corporation (Alabang, Muntinlupa City, Metro Manila)"
           experiences={[
             'Conducted functional testing for web applications of the company.',
-            'Collaborated with the team in daily stand-ups, sprint planning, grooming, retrospective as part of an Agile Scrum team.',
+            'Participated in daily stand-ups, sprint planning, grooming, retrospective as part of an Agile Scrum team.',
             'Updated existing automation scripts using pytest and selenium.',
             'Explored AI tools for use by the QA team to enhance efficiency and documented the findings',
           ]}
