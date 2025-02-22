@@ -125,8 +125,8 @@ const ProfileContent = () => {
       </motion.div>
       <div className="space-y-4 text-justify">
         <motion.div variants={profileContentChildVariants}>
-          🌟 An aspiring software engineer with a strong passion for learning,
-          designing and developing seamlessly interactive, scalable, and
+          🌟 A software developer with a strong passion for learning, designing,
+          problem solving and developing seamlessly interactive, scalable, and
           efficient applications, focusing on web technologies and user
           experience.
         </motion.div>
@@ -139,8 +139,7 @@ const ProfileContent = () => {
           💻Currently, I am focusing and expanding my expertise on software
           development using modern technologies. I&apos;m looking forward to
           learning more about other technologies. I am also interested in
-          learning about machine learning, generative artificial intelligence,
-          and IoT in the future.
+          learning about artificial intelligence, and IoT in the future.
         </motion.div>
       </div>
       <motion.div variants={profileContentChildVariants}>
