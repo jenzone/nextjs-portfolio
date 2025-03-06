@@ -24,12 +24,12 @@ interface ProjectContentProps {
 const ProjectContent: React.FC<ProjectContentProps> = ({ data }) => {
   return (
     <div className="space-y-8 py-20">
-      <div className="flex justify-between">
+      <div className="flex items-center justify-between">
         <div className="text-2xl font-semibold uppercase">{data.name}</div>
         <Link href="/projects">
           <Button className="space-x-4 text-sm">
             <ChevronLeftIcon className="mr-2 size-4" />
-            Back to projects
+            <span className="hidden lg:block">Back to projects</span>
           </Button>
         </Link>
       </div>
@@ -43,7 +43,7 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ data }) => {
           src={`/projects/${data.img}`}
           alt={data.name + ' Image'}
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
           className="object-contain"
         />
       </div>

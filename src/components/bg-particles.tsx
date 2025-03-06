@@ -32,9 +32,9 @@ const BackgroundParticles = () => {
     })
   }, [])
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container)
-  }
+  // const particlesLoaded = async (container?: Container): Promise<void> => {
+  //   console.log(container)
+  // }
 
   const options = useMemo(() => particlesConfig as ISourceOptions, [])
 
@@ -42,7 +42,7 @@ const BackgroundParticles = () => {
     return (
       <Particles
         id="tsparticles"
-        particlesLoaded={particlesLoaded}
+        // particlesLoaded={particlesLoaded}
         options={options}
         className="fixed z-0 h-full w-full object-contain"
       />

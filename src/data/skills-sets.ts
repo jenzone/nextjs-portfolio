@@ -12,6 +12,7 @@ import {
   SiExpress,
   SiEjs,
   SiPrisma,
+  SiSocketdotio,
   SiMongoose,
   SiMysql,
   SiPostgresql,
@@ -22,15 +23,16 @@ import {
   SiPostman,
   SiVercel,
   SiHeroku,
+  SiRender,
   SiLinux,
   SiFigma,
-  SiAdobexd,
   SiClerk,
   SiJira,
   SiSelenium,
   SiPytest,
   SiConfluence,
   SiMongodb,
+  SiSaucelabs,
 } from '@icons-pack/react-simple-icons'
 
 export const skills = [
@@ -60,6 +62,11 @@ export const skills = [
     icon: SiPython,
   },
   {
+    name: 'SQL',
+    category: 'languages',
+    icon: null,
+  },
+  {
     name: 'React JS',
     category: 'frontend',
     icon: SiReact,
@@ -80,6 +87,11 @@ export const skills = [
     icon: SiTailwindcss,
   },
   {
+    name: 'Figma',
+    category: 'frontend',
+    icon: SiFigma,
+  },
+  {
     name: 'Node JS',
     category: 'backend',
     icon: SiNodedotjs,
@@ -96,12 +108,12 @@ export const skills = [
   },
   {
     name: 'MySQL',
-    category: 'backend',
+    category: 'databases',
     icon: SiMysql,
   },
   {
     name: 'PostgreSQL',
-    category: 'backend',
+    category: 'databases',
     icon: SiPostgresql,
   },
   {
@@ -115,29 +127,29 @@ export const skills = [
     icon: SiGithub,
   },
   {
+    name: 'Vercel',
+    category: 'other',
+    icon: SiVercel,
+  },
+  {
+    name: 'Heroku',
+    category: 'other',
+    icon: SiHeroku,
+  },
+  {
+    name: 'Render',
+    category: 'other',
+    icon: SiRender,
+  },
+  {
     name: 'VS Code',
     category: 'other',
     icon: SiVisualstudiocode,
   },
   {
-    name: 'Postman',
-    category: 'other',
-    icon: SiPostman,
-  },
-  {
     name: 'Linux',
     category: 'other',
     icon: SiLinux,
-  },
-  {
-    name: 'Figma',
-    category: 'design',
-    icon: SiFigma,
-  },
-  {
-    name: 'Adobe XD',
-    category: 'design',
-    icon: SiAdobexd,
   },
   {
     name: 'Clerk',
@@ -156,27 +168,52 @@ export const skills = [
   },
   {
     name: 'Pytest',
-    category: 'automation',
+    category: 'testing',
     icon: SiPytest,
   },
   {
     name: 'Selenium',
-    category: 'automation',
+    category: 'testing',
     icon: SiSelenium,
   },
   {
+    name: 'Postman',
+    category: 'testing',
+    icon: SiPostman,
+  },
+  {
     name: 'EJS',
-    category: 'backend',
+    category: 'other',
     icon: SiEjs,
   },
   {
     name: 'MongoDB',
-    category: 'backend',
+    category: 'databases',
     icon: SiMongodb,
   },
   {
     name: 'Mongoose',
     category: 'backend',
     icon: SiMongoose,
+  },
+  {
+    name: 'BrowserStack',
+    category: 'testing',
+    icon: null,
+  },
+  {
+    name: 'Sauce Labs',
+    category: 'testing',
+    icon: SiSaucelabs,
+  },
+  {
+    name: 'Ghost Inspector',
+    category: 'testing',
+    icon: null,
+  },
+  {
+    name: 'Socket.io',
+    category: 'backend',
+    icon: SiSocketdotio,
   },
 ]

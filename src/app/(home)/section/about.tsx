@@ -56,7 +56,7 @@ const ProfileImage = () => {
         alt={'profile picture'}
         fill
         priority
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
         className="aspect-square rounded object-contain"
       />
       <motion.div

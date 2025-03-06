@@ -36,10 +36,10 @@ const Skills = () => {
   const tab = [
     'All',
     'languages',
-    'design',
     'frontend',
     'backend',
-    'automation',
+    'databases',
+    'testing',
     'other',
   ]
 

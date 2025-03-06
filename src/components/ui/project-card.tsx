@@ -80,11 +80,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           animate={controls}
           className="group cursor-pointer space-y-4 rounded-lg border-2 border-[var(--foreground-muted)] p-4 shadow-lg transition duration-500 ease-out hover:border-[var(--primary)]"
         >
-          <motion.div className="relative aspect-video h-auto w-auto">
+          <motion.div className="relative aspect-video h-auto w-auto rounded bg-[var(--foreground-muted)]">
             <Image
               src={`/projects/${img}`}
               alt={`${name} image`}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 40vw"
               className="aspect-video object-contain"
             />
             <motion.div
