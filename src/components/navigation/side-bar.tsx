@@ -120,11 +120,11 @@ const SideBar = () => {
   return (
     <motion.div initial="closed" animate={open ? 'open' : 'closed'}>
       <motion.div
-        className="absolute bottom-0 left-0 top-0 z-50 w-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent)]"
+        className="absolute bottom-0 left-0 top-0 z-50 w-full bg-linear-to-r from-(--accent) to-(--accent)"
         variants={beforeSideBarOpen}
       />
       <motion.div
-        className="absolute bottom-0 left-0 top-0 z-50 flex w-full flex-col justify-center space-y-28 bg-gradient-to-r from-[var(--background)] to-[var(--primary)] px-12"
+        className="absolute bottom-0 left-0 top-0 z-50 flex w-full flex-col justify-center space-y-28 bg-linear-to-r from-(--background) to-(--primary) px-12"
         variants={sideBar}
       >
         {/* LINKS */}
@@ -138,7 +138,7 @@ const SideBar = () => {
             <motion.div
               key={item.id}
               variants={linksChildVariants}
-              className="cursor-pointer text-5xl font-medium transition-colors duration-300 ease-out hover:text-[var(--accent)]"
+              className="cursor-pointer text-5xl font-medium transition-colors duration-300 ease-out hover:text-(--accent)"
             >
               {isHomePage ? (
                 item.id === 'resources' ? (

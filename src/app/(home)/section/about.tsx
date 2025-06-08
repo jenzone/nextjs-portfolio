@@ -57,13 +57,13 @@ const ProfileImage = () => {
         fill
         priority
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-        className="aspect-square rounded object-contain"
+        className="aspect-square rounded-sm object-contain"
       />
       <motion.div
         variants={profileImageVariants}
         initial="hidden"
         animate={controls}
-        className="absolute h-full w-full bg-[var(--foreground)]"
+        className="absolute h-full w-full bg-(--foreground)"
       />
     </motion.div>
   )
@@ -121,7 +121,7 @@ const ProfileContent = () => {
         className="text-2xl font-semibold"
       >
         Hi, I&apos;m{' '}
-        <span className="text-[var(--primary)]">Jenson Caparida</span>
+        <span className="text-(--primary)">Jenson Caparida</span>
       </motion.div>
       <div className="space-y-4 text-justify">
         <motion.div variants={profileContentChildVariants}>

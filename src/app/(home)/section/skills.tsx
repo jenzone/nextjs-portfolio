@@ -92,7 +92,7 @@ const Skills = () => {
             key={item}
             variants={skillChildVariants}
             onClick={() => setSelectedTab(item)}
-            className={`${selectedTab === item ? 'tab text-[var(--primary)]' : ''} hover:text-primary-200 cursor-pointer font-medium capitalize outline-none transition-colors duration-300`}
+            className={`${selectedTab === item ? 'tab text-(--primary)' : ''} hover:text-primary-200 cursor-pointer font-medium capitalize outline-hidden transition-colors duration-300`}
           >
             {item}
           </motion.button>

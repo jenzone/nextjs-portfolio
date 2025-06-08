@@ -14,12 +14,12 @@ export const Timeline: React.FC<ITimeline> = ({
   experiences,
 }) => {
   return (
-    <div className="border-l-2 border-[var(--primary)] px-4 py-4">
+    <div className="border-l-2 border-(--primary) px-4 py-4">
       {/* date timeline */}
       <div className="relative flex items-center">
-        <div className="absolute -left-[23px] top-0.5 h-3 w-3 rounded-full bg-[var(--primary)]" />
+        <div className="absolute -left-[23px] top-0.5 h-3 w-3 rounded-full bg-(--primary)" />
         <div className="flex w-full items-center justify-between">
-          <div className="text-sm font-semibold text-[var(--primary)]">
+          <div className="text-sm font-semibold text-(--primary)">
             {from} - {to}
           </div>
         </div>

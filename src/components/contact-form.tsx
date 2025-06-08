@@ -54,27 +54,27 @@ const ContactForm = () => {
         {...register('name')}
         placeholder="Name *"
         type="text"
-        className={`${errors.name ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-[var(--primary)] bg-transparent py-2 text-[var(--background)] caret-[var(--primary)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent)]`}
+        className={`${errors.name ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-(--primary) bg-transparent py-2 text-(--background) caret-(--primary) outline-hidden transition-colors duration-500 ease-linear focus:border-(--accent)`}
       />
 
       <input
         {...register('email')}
         placeholder="Email *"
         type="email"
-        className={`${errors.email ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-[var(--primary)] bg-transparent py-2 text-[var(--background)] caret-[var(--primary)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent)]`}
+        className={`${errors.email ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-(--primary) bg-transparent py-2 text-(--background) caret-(--primary) outline-hidden transition-colors duration-500 ease-linear focus:border-(--accent)`}
       />
 
       <input
         {...register('subject')}
         placeholder="Subject *"
         type="text"
-        className={`${errors.subject ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-[var(--primary)] bg-transparent py-2 text-[var(--background)] caret-[var(--primary)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent)]`}
+        className={`${errors.subject ? 'border-red-500 placeholder-red-400' : ''} w-full border-b-2 border-(--primary) bg-transparent py-2 text-(--background) caret-(--primary) outline-hidden transition-colors duration-500 ease-linear focus:border-(--accent)`}
       />
 
       <textarea
         {...register('message')}
         placeholder="Message *"
-        className={`${errors.message ? 'border-red-500 placeholder-red-400' : ''} h-full max-h-[250px] min-h-[100px] w-full border-b-2 border-[var(--primary)] bg-transparent py-2 text-[var(--background)] caret-[var(--primary)] outline-none transition-colors duration-500 ease-linear focus:border-[var(--accent)]`}
+        className={`${errors.message ? 'border-red-500 placeholder-red-400' : ''} h-full max-h-[250px] min-h-[100px] w-full border-b-2 border-(--primary) bg-transparent py-2 text-(--background) caret-(--primary) outline-hidden transition-colors duration-500 ease-linear focus:border-(--accent)`}
       />
       <Button className="mt-4" type="submit">
         Send <PaperAirplaneIcon className="ml-2 size-4" />

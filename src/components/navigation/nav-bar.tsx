@@ -62,7 +62,7 @@ const NavBar = () => {
           <motion.div
             key={item.id}
             variants={navBarChildVariants}
-            className="cursor-pointer text-lg font-bold text-neutral-400 transition-colors duration-300 ease-out hover:text-[var(--accent)]"
+            className="cursor-pointer text-lg font-bold text-neutral-400 transition-colors duration-300 ease-out hover:text-(--accent)"
           >
             {isHomePage ? (
               item.id === 'resources' ? (

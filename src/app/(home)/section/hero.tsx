@@ -103,7 +103,7 @@ const Hero = () => {
             <motion.span
               variants={letterChildVariants}
               key={index}
-              className="cursor-default transition-colors duration-500 ease-out hover:text-[var(--primary)]"
+              className="cursor-default transition-colors duration-500 ease-out hover:text-(--primary)"
             >
               {letter}
             </motion.span>
@@ -114,7 +114,7 @@ const Hero = () => {
             <motion.span
               variants={letterChildVariants}
               key={index}
-              className="cursor-default transition-colors duration-500 ease-out hover:text-[var(--primary)]"
+              className="cursor-default transition-colors duration-500 ease-out hover:text-(--primary)"
             >
               {letter}
             </motion.span>

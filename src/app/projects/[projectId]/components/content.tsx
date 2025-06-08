@@ -27,13 +27,13 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ data }) => {
       <div className="flex items-center justify-between">
         <div className="text-2xl font-semibold uppercase">{data.name}</div>
         <Link href="/projects">
-          <Button className="space-x-4 text-sm">
+          <Button className="text-sm">
             <ChevronLeftIcon className="mr-2 size-4" />
             <span className="hidden lg:block">Back to projects</span>
           </Button>
         </Link>
       </div>
-      <div className="relative flex h-[400px] w-full items-center justify-center rounded-lg border-2 border-[var(--primary)] bg-[var(--primary)] md:h-[500px] lg:px-36">
+      <div className="relative flex h-[400px] w-full items-center justify-center rounded-lg border-2 border-(--primary) bg-(--primary) md:h-[500px] lg:px-36">
         {/* <iframe
           src={data.figma_link}
           allowFullScreen
@@ -49,14 +49,14 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ data }) => {
       </div>
       <div className="space-y-4">
         <div>
-          <span className="font-medium uppercase text-[var(--primary-light)]">
+          <span className="font-medium uppercase text-(--primary-light)">
             Description:{' '}
           </span>
           {data.description}
         </div>
         <div className="flex space-x-4">
           <div>
-            <span className="font-medium uppercase text-[var(--primary-light)]">
+            <span className="font-medium uppercase text-(--primary-light)">
               Tech Stacks:{' '}
             </span>
             {data.techstack.join(', ')}

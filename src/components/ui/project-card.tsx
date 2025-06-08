@@ -78,9 +78,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           variants={projectCardVariants}
           initial="hidden"
           animate={controls}
-          className="group cursor-pointer space-y-4 rounded-lg border-2 border-[var(--foreground-muted)] p-4 shadow-lg transition duration-500 ease-out hover:border-[var(--primary)]"
+          className="group cursor-pointer space-y-4 rounded-lg border-2 border-(--foreground-muted) p-4 shadow-lg transition duration-500 ease-out hover:border-(--primary)"
         >
-          <motion.div className="relative aspect-video h-auto w-auto rounded bg-[var(--foreground-muted)]">
+          <motion.div className="relative aspect-video h-auto w-auto rounded-sm bg-(--foreground-muted)">
             <Image
               src={`/projects/${img}`}
               alt={`${name} image`}
@@ -90,7 +90,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             />
             <motion.div
               variants={projectCardImageVariants}
-              className="absolute h-full w-full bg-[var(--foreground)]"
+              className="absolute h-full w-full bg-(--foreground)"
             />
           </motion.div>
           <motion.div className="space-y-4">
@@ -102,7 +102,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 {name.length > 20 ? name.slice(0, 20) + '...' : name}
               </div>
               <span className="arrow">
-                <ArrowRightIcon className="social size-6 transform duration-300 ease-out will-change-transform group-hover:-rotate-45 group-hover:scale-90 group-hover:text-[var(--foreground)]" />
+                <ArrowRightIcon className="social size-6 transform duration-300 ease-out will-change-transform group-hover:-rotate-45 group-hover:scale-90 group-hover:text-(--foreground)" />
               </span>
             </motion.div>
             <motion.div variants={projectCardChildVariants}>
@@ -117,7 +117,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               {techstack.map((tech) => (
                 <li
                   key={tech}
-                  className="mb-4 whitespace-nowrap rounded-md border border-[var(--primary)] px-2 py-1 text-xs text-[var(--primary)]"
+                  className="mb-4 whitespace-nowrap rounded-md border border-(--primary) px-2 py-1 text-xs text-(--primary)"
                 >
                   {tech}
                 </li>

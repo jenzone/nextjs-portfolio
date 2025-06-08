@@ -16,15 +16,15 @@ export const Button: React.FC<ButtonProps> = ({
   switch (variant) {
     case 'outline':
       buttonStyle =
-        'border border-[var(--primary-light)] bg-transparent text-[var(--primary-light)] hover:border-[var(--primary)] hover:bg-[var(--primary)] hover:text-[var(--foreground)] transition-colors duration-300 ease-out'
+        'border border-(--primary-light) bg-transparent text-(--primary-light) hover:border-(--primary) hover:bg-(--primary) hover:text-(--foreground) transition-colors duration-300 ease-out'
       hoverAnimation = null
       break
     case 'solid':
     default:
       buttonStyle =
-        'bg-gradient-to-r from-[var(--primary)] to-[var(--primary-light)] text-[var(--foreground)]'
+        'bg-linear-to-r from-(--primary) to-(--primary-light) text-(--foreground)'
       hoverAnimation = (
-        <span className="absolute inset-0 transform rounded-sm border-2 border-[var(--accent)] transition-transform duration-300 will-change-transform group-hover:translate-x-1.5 group-hover:translate-y-1.5" />
+        <span className="absolute inset-0.5 transform rounded-xs border-2 border-(--accent) transition-transform duration-300 will-change-transform group-hover:translate-x-2 group-hover:translate-y-2" />
       )
       break
   }
@@ -34,7 +34,7 @@ export const Button: React.FC<ButtonProps> = ({
       <button className={`${className} group relative z-20`} type={type}>
         {/* button content */}
         <span
-          className={`relative z-10 flex items-center justify-center rounded-sm px-4 py-3 ${buttonStyle}`}
+          className={`relative z-10 flex items-center justify-center rounded-xs px-4 py-3 ${buttonStyle}`}
         >
           {children}
         </span>

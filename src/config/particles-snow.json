@@ -111,7 +111,7 @@
           },
           "radius": 1000
         },
-        "shadow": {
+        "shadow-sm": {
           "color": {
             "value": "#000000"
           },
@@ -277,8 +277,8 @@
       }
     },
     "reduceDuplicates": false,
-    "shadow": {
-      "blur": 0,
+    "shadow-sm": {
+      "blur-sm": 0,
       "color": {
         "value": "#000"
       },
@@ -430,8 +430,8 @@
       "enable": false,
       "frequency": 1,
       "opacity": 1,
-      "shadow": {
-        "blur": 5,
+      "shadow-sm": {
+        "blur-sm": 5,
         "color": {
           "value": "#000"
         },

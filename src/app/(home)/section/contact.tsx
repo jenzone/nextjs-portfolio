@@ -50,7 +50,7 @@ const Contact = () => {
           className="aspect-square object-cover"
         />
       </div>
-      <div className="flex w-full flex-col items-center justify-center space-y-12 bg-[var(--foreground)]">
+      <div className="flex w-full flex-col items-center justify-center space-y-12 bg-(--foreground)">
         <Heading heading="Contact Me" />
         <motion.div variants={contactVariants}>
           <ContactForm />

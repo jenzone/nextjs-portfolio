@@ -14,7 +14,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="flex h-[300px] flex-col items-center justify-center space-y-8 border-t border-[var(--foreground)] py-20">
+    <footer className="flex h-[300px] flex-col items-center justify-center space-y-8 border-t border-(--foreground) py-20">
       <div className="cursor-pointer">
         {isHomePage ? (
           <ScrollLink to="hero" smooth={true} duration={500} delay={200}>
@@ -30,7 +30,7 @@ const Footer = () => {
         {socials.map((social) => (
           <div
             key={social.name}
-            className="cursor-pointer font-bold text-neutral-400 transition-colors duration-300 ease-out hover:text-[var(--accent)]"
+            className="cursor-pointer font-bold text-neutral-400 transition-colors duration-300 ease-out hover:text-(--accent)"
           >
             <Link href={social.href}>{social.name}</Link>
           </div>
@@ -40,13 +40,13 @@ const Footer = () => {
         © {currentYear} • Jenson Caparida • All Rights Reserved.
       </div>
       <div className="flex space-x-2">
-        <div className="h-6 w-6 rounded-full bg-[var(--primary)] shadow shadow-zinc-500" />
-        <div className="h-6 w-6 rounded-full bg-[var(--primary-light)] shadow shadow-zinc-500" />
-        <div className="h-6 w-6 rounded-full bg-[var(--accent)] shadow shadow-zinc-500" />
-        <div className="h-6 w-6 rounded-full bg-[var(--foreground)] shadow shadow-zinc-500" />
-        <div className="h-6 w-6 rounded-full bg-[var(--foreground-muted)] shadow shadow-zinc-500" />
-        <div className="h-6 w-6 rounded-full bg-[var(--background)] shadow shadow-zinc-500" />
-        <div className="h-6 w-6 rounded-full bg-[var(--background-muted)] shadow shadow-zinc-500" />
+        <div className="h-6 w-6 rounded-full bg-(--primary) shadow-sm shadow-zinc-500" />
+        <div className="h-6 w-6 rounded-full bg-(--primary-light) shadow-sm shadow-zinc-500" />
+        <div className="h-6 w-6 rounded-full bg-(--accent) shadow-sm shadow-zinc-500" />
+        <div className="h-6 w-6 rounded-full bg-(--foreground) shadow-sm shadow-zinc-500" />
+        <div className="h-6 w-6 rounded-full bg-(--foreground-muted) shadow-sm shadow-zinc-500" />
+        <div className="h-6 w-6 rounded-full bg-(--background) shadow-sm shadow-zinc-500" />
+        <div className="h-6 w-6 rounded-full bg-(--background-muted) shadow-sm shadow-zinc-500" />
       </div>
     </footer>
   )

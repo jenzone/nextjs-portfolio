@@ -1,17 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-  /* --primary-100: #004e98;
-  --primary-200: #0077cc;
-  --accent-100: #eb5e28;
-  --accent-200: #ff7e3d;
-  --text-100: #f7f7f7;
-  --text-200: #ccc5b9;
-  --bg-100: #2a2a28;
-  --bg-200: #403d39; */
-
+@theme {
   --primary: #3f7c85;
   --primary-light: #00ccbf;
   --accent: #ff5f5d;
@@ -21,137 +10,155 @@
   --background-muted: #747e7e;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+  }
+
+  section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+  }
+  
+
+  /* SOCIAL ANIMATION */
+  .social {
+    position: relative;
+  }
+
+  .social::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: var(--foreground);
+    border-radius: 50%;
+    transition:
+      width 0.2s ease-in-out,
+      height 0.2s ease-in-out;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+  }
+
+  .social:hover::before {
+    width: 99%;
+    height: 99%;
+  }
+
+  /* SECTION HEADING */
+  .heading {
+    position: relative;
+  }
+
+  .heading::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    border-radius: 50px;
+    background-color: var(--primary);
+  }
+
+  /* TAB ANIMATION */
+  .tab {
+    position: relative;
+  }
+
+  .tab::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    border-radius: 250px;
+    background-color: var(--primary);
+  }
+
+  /* TAB-PANEL ANIMATION */
+
+  .tab-panel {
+    position: relative;
+  }
+
+  .tab-panel::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: var(--accent);
+    border-radius: 8px;
+    transition:
+      width 0.3s ease-in-out,
+      height 0.3s ease-in-out;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .tab-panel:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* SCROLLBAR */
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #eeecec;
+  }
+
+  /* ARROW ANIMATION PRODUCT CARD */
+  .arrow {
+    position: relative;
+  }
+
+  .arrow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: var(--primary);
+    border-radius: 50%;
+    transition:
+      width 0.3s ease-in-out,
+      height 0.3s ease-in-out;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .group:hover .arrow::before {
+    width: 150%;
+    height: 150%;
+  }
+  
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-}
 
-section {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-}
 
-/* SOCIAL ANIMATION */
-.social {
-  position: relative;
-}
 
-.social::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background-color: var(--foreground);
-  border-radius: 50%;
-  transition:
-    width 0.2s ease-in-out,
-    height 0.2s ease-in-out;
-  z-index: -2;
-  transform: translate(-50%, -50%);
-}
 
-.social:hover::before {
-  width: 99%;
-  height: 99%;
-}
 
-/* SECTION HEADING */
-.heading {
-  position: relative;
-}
-
-.heading::before {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 2px;
-  bottom: -10px;
-  left: 0;
-  border-radius: 50px;
-  background-color: var(--primary);
-}
-
-/* TAB ANIMATION */
-.tab {
-  position: relative;
-}
-
-.tab::before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 1px;
-  bottom: -4px;
-  left: 0;
-  border-radius: 250px;
-  background-color: var(--primary);
-}
-
-/* TAB-PANEL ANIMATION */
-
-.tab-panel {
-  position: relative;
-}
-
-.tab-panel::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background-color: var(--accent);
-  border-radius: 8px;
-  transition:
-    width 0.3s ease-in-out,
-    height 0.3s ease-in-out;
-  z-index: 0;
-  transform: translate(-50%, -50%);
-}
-
-.tab-panel:hover::before {
-  width: 100%;
-  height: 100%;
-}
-
-/* SCROLLBAR */
-.scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary) #eeecec;
-}
-
-/* ARROW ANIMATION PRODUCT CARD */
-.arrow {
-  position: relative;
-}
-
-.arrow::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background-color: var(--primary);
-  border-radius: 50%;
-  transition:
-    width 0.3s ease-in-out,
-    height 0.3s ease-in-out;
-  z-index: 0;
-  transform: translate(-50%, -50%);
-}
-
-.group:hover .arrow::before {
-  width: 150%;
-  height: 150%;
-}
