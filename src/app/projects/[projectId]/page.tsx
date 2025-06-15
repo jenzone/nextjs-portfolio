@@ -4,14 +4,14 @@ import ProjectContent from './components/content'
 
 import projects from '@/data/projects.json'
 
-export default function ProjectPage({
+export default async function ProjectPage({
   params,
 }: {
-  params: {
-    projectId: string
-  }
+  params: Promise<{ projectId: string }>
 }) {
-  const project = projects.find((project) => project.id === params.projectId)
+  const { projectId } = await params
+
+  const project = projects.find((project) => project.id === projectId)
 
   if (!project) {
     return (

@@ -49,14 +49,14 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ data }) => {
       </div>
       <div className="space-y-4">
         <div>
-          <span className="font-medium uppercase text-(--primary-light)">
+          <span className="font-medium text-(--primary-light) uppercase">
             Description:{' '}
           </span>
           {data.description}
         </div>
         <div className="flex space-x-4">
           <div>
-            <span className="font-medium uppercase text-(--primary-light)">
+            <span className="font-medium text-(--primary-light) uppercase">
               Tech Stacks:{' '}
             </span>
             {data.techstack.join(', ')}

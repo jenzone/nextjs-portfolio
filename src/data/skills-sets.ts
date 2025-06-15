@@ -1,6 +1,6 @@
 import {
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiJavascript,
   SiTypescript,
   SiPython,
@@ -19,7 +19,6 @@ import {
   SiArduino,
   SiGit,
   SiGithub,
-  SiVisualstudiocode,
   SiPostman,
   SiVercel,
   SiHeroku,
@@ -44,7 +43,7 @@ export const skills = [
   {
     name: 'CSS',
     category: 'languages',
-    icon: SiCss3,
+    icon: SiCss,
   },
   {
     name: 'JavaScript',
@@ -140,11 +139,6 @@ export const skills = [
     name: 'Render',
     category: 'other',
     icon: SiRender,
-  },
-  {
-    name: 'VS Code',
-    category: 'other',
-    icon: SiVisualstudiocode,
   },
   {
     name: 'Linux',

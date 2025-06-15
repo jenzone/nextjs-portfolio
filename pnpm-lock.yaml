@@ -15,8 +15,8 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.51.0(react@19.1.0))
       '@icons-pack/react-simple-icons':
-        specifier: ^9.3.0
-        version: 9.3.0(react@19.1.0)
+        specifier: ^13.1.0
+        version: 13.1.0(react@19.1.0)
       '@splinetool/react-spline':
         specifier: ^2.2.6
         version: 2.2.6(@splinetool/runtime@1.0.59)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -186,10 +186,10 @@ packages:
   '@humanwhocodes/object-schema@2.0.2':
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
 
-  '@icons-pack/react-simple-icons@9.3.0':
-    resolution: {integrity: sha512-e2VRDFrhI9rCkEdkuAUhf/Ool0cwusWnwKqMACbIRMLHXxnHp1SdnGlRaEEjDeF4R0pQaEkmVNs2x2vn1sl+7A==}
+  '@icons-pack/react-simple-icons@13.1.0':
+    resolution: {integrity: sha512-BrBHWxWM1X2pCdFmQfYnwkfwwm9Ta5NMdvSNe/ns2e9rhVK863rRAF6AhDjsvUIDKXSkRG1HfXZiSX/Uij0kxg==}
     peerDependencies:
-      react: ^16.13 || ^17 || ^18
+      react: ^16.13 || ^17 || ^18 || ^19
 
   '@img/sharp-darwin-arm64@0.34.2':
     resolution: {integrity: sha512-OfXHZPppddivUJnqyKoi5YVeHRkkNE2zUFT2gbpKxp/JZCFYEYubnMg+gOp6lWfasPrTS+KPosKqdI+ELYVDtg==}
@@ -2705,7 +2705,7 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.2': {}
 
-  '@icons-pack/react-simple-icons@9.3.0(react@19.1.0)':
+  '@icons-pack/react-simple-icons@13.1.0(react@19.1.0)':
     dependencies:
       react: 19.1.0
 
