@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { ArrowLongRightIcon } from '@heroicons/react/24/solid'
 import { motion, Variants, useAnimation, useInView } from 'framer-motion'
 
@@ -13,19 +13,20 @@ import projects from '@/data/projects.json'
 
 const Projects = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: true, margin: '-20%' })
 
   const controls = useAnimation()
+
+  const projectsFiltered = useMemo(
+    () => projects.filter((project) => project.featured === true),
+    [],
+  )
 
   useEffect(() => {
     if (isInView) {
       controls.start('visible')
     }
   }, [isInView, controls])
-
-  const projectsFiltered = projects.filter(
-    (project) => project.featured === true,
-  )
 
   const projectVariants: Variants = {
     hidden: {
@@ -80,7 +81,7 @@ const Projects = () => {
       </motion.div>
       <motion.div variants={projectChildVariants}>
         <Link href="/projects">
-          <Button>
+          <Button className="cursor-pointer">
             View All Projects
             <ArrowLongRightIcon className="ml-2 size-6" />
           </Button>

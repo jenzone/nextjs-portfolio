@@ -120,8 +120,7 @@ const ProfileContent = () => {
         variants={profileContentChildVariants}
         className="text-2xl font-semibold"
       >
-        Hi, I&apos;m{' '}
-        <span className="text-(--primary)">Jenson Caparida</span>
+        Hi, I&apos;m <span className="text-(--primary)">Jenson Caparida</span>
       </motion.div>
       <div className="space-y-4 text-justify">
         <motion.div variants={profileContentChildVariants}>
@@ -147,7 +146,7 @@ const ProfileContent = () => {
           href="https://www.linkedin.com/in/jensoncaparida/details/certifications/"
           target="_blank"
         >
-          <Button>
+          <Button className="cursor-pointer">
             Certicates
             <ArrowTopRightOnSquareIcon className="ml-2 size-4" />
           </Button>
@@ -164,6 +163,20 @@ const Experience = () => {
       {/* timeline */}
       <div className="px-1">
         <Timeline
+          role="Software Engineer"
+          from="March 2025"
+          to="Present"
+          company="Quantum Technology Inc. -> VyteDev (Paranaque City, Metro Manila)"
+          experiences={
+            [
+              // 'Optimized React website performance by 40% using TwicPics, asset compression, lazy loading, and JS/CSS minification.',
+              // 'Developed and optimized a cross-platform mobile application using React Native CLI by integration of REST APIs, implemented data handling and pagination, refactoring, and added new features',
+              // 'Integrated REST APIs and optimized data handling to enhance mobile app performance.',
+              // 'Collaborated with the team to align requirements and resolve integration challenges.',
+            ]
+          }
+        />
+        <Timeline
           role="QA SDET Intern"
           from="Jul"
           to="Nov 2024"
@@ -175,7 +188,7 @@ const Experience = () => {
             'Explored AI tools for use by the QA team to enhance efficiency and documented the findings',
           ]}
         />
-        <Timeline
+        {/* <Timeline
           role="Work Immersion Trainee"
           from="Jul 2019"
           to="10 days"
@@ -185,7 +198,7 @@ const Experience = () => {
             'Tested and inspected components to ensure functionality and quality of each component.',
             'Followed safety protocols and cleanroom procedures during assembly and testing processes.',
           ]}
-        />
+        /> */}
       </div>
     </div>
   )

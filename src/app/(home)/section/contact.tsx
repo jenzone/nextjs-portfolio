@@ -10,7 +10,7 @@ import { Heading } from '@/components/ui/heading'
 
 const Contact = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: true, margin: '-20%' })
 
   const controls = useAnimation()
 

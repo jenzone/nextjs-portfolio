@@ -15,7 +15,7 @@ export default function HomeLayout({
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1000)
     return () => clearTimeout(timer)
-  }, [])
+  }, [loading])
 
   return (
     <motion.div
