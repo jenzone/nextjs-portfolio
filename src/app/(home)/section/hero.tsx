@@ -104,7 +104,7 @@ const Hero = () => {
             <motion.span
               variants={letterChildVariants}
               key={index}
-              className="cursor-default transition-colors duration-500 ease-out hover:text-(--primary)"
+              className="hover:text-(--primary) cursor-default transition-colors duration-500 ease-out"
             >
               {letter}
             </motion.span>
@@ -115,7 +115,7 @@ const Hero = () => {
             <motion.span
               variants={letterChildVariants}
               key={index}
-              className="cursor-default transition-colors duration-500 ease-out hover:text-(--primary)"
+              className="hover:text-(--primary) cursor-default transition-colors duration-500 ease-out"
             >
               {letter}
             </motion.span>
@@ -125,8 +125,8 @@ const Hero = () => {
       {/* HERO SUBHEADING */}
       <motion.div variants={heroChildVariants} className="relative h-[28px]">
         <FlipWords
-          className="absolute m-0 p-0 font-serif text-lg whitespace-nowrap uppercase italic"
-          words={['Software Developer', 'UX/UI Designer', 'Automation Tester']}
+          className="absolute m-0 whitespace-nowrap p-0 font-serif text-lg uppercase italic"
+          words={['Software Engineer', 'UX/UI Designer', 'Automation Tester']}
           duration={3000}
         />
       </motion.div>

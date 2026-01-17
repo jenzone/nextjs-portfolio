@@ -7,6 +7,6 @@ export default function robot(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://jensoncaparida.me/sitemap.xml',
+    sitemap: 'https://jensoncaparida.com/sitemap.xml',
   }
 }

@@ -1,11 +1,11 @@
 ## NextJS Portfolio
 
-Personal Website Portfolio built with **NextJS** by Jenson Caparida([@Jenzone](https://jensoncaparida.me)).
+Personal Website Portfolio built with **NextJS** by Jenson Caparida([@Jenzone](https://jensoncaparida.com)).
 
 ### Features
 
 - Project Showcase - displays portfolio projects and links.
-- Resource Hub - seperate website for personal collection of tools, resources, guides and links by Jenson Caparida([@Jenzone](https://jensoncaparida.me)).
+- Resource Hub - seperate website for personal collection of tools, resources, guides and links by Jenson Caparida([@Jenzone](https://jensoncaparida.com)).
 - Contact Form - integrated with nodemailer for sending messages directly to my email.
 
 ### Requirements

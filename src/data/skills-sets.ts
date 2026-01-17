@@ -32,12 +32,9 @@ import {
   SiConfluence,
   SiMongodb,
   SiSaucelabs,
-  SiExpo,
-  SiFramer,
-  SiReactquery,
-  SiSwr,
-  SiReactrouter,
+  SiDocker,
   SiDrizzle,
+  SiGithubactions,
 } from '@icons-pack/react-simple-icons'
 
 export const skills = [
@@ -217,38 +214,23 @@ export const skills = [
     icon: SiSocketdotio,
   },
   {
-    name: 'Zustand',
+    name: 'React Native',
     category: 'frontend',
     icon: null,
   },
   {
-    name: 'React Router',
-    category: 'frontend',
-    icon: SiReactrouter,
+    name: 'Docker',
+    category: 'other',
+    icon: SiDocker,
   },
   {
-    name: 'React Router',
-    category: 'backend',
+    name: 'Drizzle',
+    category: 'databases',
     icon: SiDrizzle,
   },
   {
-    name: 'React Native',
-    category: 'frontend',
-    icon: SiReact,
-  },
-  {
-    name: 'Expo',
-    category: 'frontend',
-    icon: SiExpo,
-  },
-  {
-    name: 'SWR',
-    category: 'frontend',
-    icon: SiSwr,
-  },
-  {
-    name: 'TanStack Query',
-    category: 'frontend',
-    icon: SiReactquery,
+    name: 'GitHub Actions',
+    category: 'other',
+    icon: SiGithubactions,
   },
 ]

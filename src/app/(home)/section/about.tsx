@@ -14,7 +14,7 @@ const About = () => {
   return (
     <motion.div className="space-y-16 py-16">
       <Heading heading="About Me" />
-      <div className="grid h-full w-full grid-cols-1 gap-8 sm:gap-12 md:grid-cols-2">
+      <div className="grid h-full w-full grid-cols-1 gap-8 sm:gap-12 md:grid-cols-2 md:gap-10 lg:gap-0">
         <ProfileImage />
         <ProfileContent />
       </div>
@@ -52,7 +52,8 @@ const ProfileImage = () => {
       className="relative aspect-square h-full w-full md:max-h-[450px] md:max-w-[450px]"
     >
       <Image
-        src="https://avatars.githubusercontent.com/u/113231287?s=400&u=d5756361d7ca19e86b44b75069ddca06283a1e05&v=4"
+        // src="https://avatars.githubusercontent.com/u/113231287?s=400&u=d5756361d7ca19e86b44b75069ddca06283a1e05&v=4"
+        src="/profile_img.jpg"
         alt={'profile picture'}
         fill
         priority
@@ -63,7 +64,7 @@ const ProfileImage = () => {
         variants={profileImageVariants}
         initial="hidden"
         animate={controls}
-        className="absolute h-full w-full bg-(--foreground)"
+        className="bg-(--foreground) absolute h-full w-full"
       />
     </motion.div>
   )
@@ -124,18 +125,18 @@ const ProfileContent = () => {
       </motion.div>
       <div className="space-y-4 text-justify">
         <motion.div variants={profileContentChildVariants}>
-          🌟 A software developer with a strong passion for learning, designing,
+          🌟 A software engineer with a strong passion for learning, designing,
           problem solving and developing seamlessly interactive, scalable, and
           efficient applications, focusing on web technologies and user
           experience.
         </motion.div>
         <motion.div variants={profileContentChildVariants}>
-          🎓 I am graduating student at Technological University of the
-          Philippines in Cavite, Philippines with a Bachelor of Engineering
-          Technology degree with a major in Computer Engineering Technology.
+          🎓 I graduated from Technological University of the Philippines in
+          Cavite, Philippines with a Bachelor of Engineering Technology degree
+          with a major in Computer Engineering Technology.
         </motion.div>
         <motion.div variants={profileContentChildVariants}>
-          💻Currently, I am focusing and expanding my expertise on software
+          💻 Currently, I am focusing and expanding my expertise on software
           development using modern technologies. I&apos;m looking forward to
           learning more about other technologies. I am also interested in
           learning about artificial intelligence, and IoT in the future.
