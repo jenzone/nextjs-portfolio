@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   motion,
   Variants,
@@ -22,26 +22,32 @@ interface ISkillSets {
 
 const Skills = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: true, margin: '-20%' })
 
   const controls = useAnimation()
 
   const [selectedTab, setSelectedTab] = useState('All')
 
-  const filteredSkills =
-    selectedTab === 'All'
-      ? skills
-      : skills.filter((skill) => skill.category.includes(selectedTab))
+  const tab = useMemo(
+    () => [
+      'All',
+      'languages',
+      'frontend',
+      'backend',
+      'databases',
+      'testing',
+      'other',
+    ],
+    [],
+  )
 
-  const tab = [
-    'All',
-    'languages',
-    'frontend',
-    'backend',
-    'databases',
-    'testing',
-    'other',
-  ]
+  const filteredSkills = useMemo(
+    () =>
+      selectedTab === 'All'
+        ? skills
+        : skills.filter((skill) => skill.category.includes(selectedTab)),
+    [selectedTab],
+  )
 
   useEffect(() => {
     if (isInView) {
@@ -76,6 +82,10 @@ const Skills = () => {
     },
   }
 
+  const handleTabClick = (item: string) => {
+    setSelectedTab(item)
+  }
+
   return (
     <motion.div
       ref={ref}
@@ -91,10 +101,10 @@ const Skills = () => {
           <motion.button
             key={item}
             variants={skillChildVariants}
-            onClick={() => setSelectedTab(item)}
+            onClick={() => handleTabClick(item)}
             className={`${selectedTab === item ? 'tab text-(--primary)' : ''} hover:text-primary-200 cursor-pointer font-medium capitalize outline-hidden transition-colors duration-300`}
           >
-            {item}
+            {item === 'frontend' ? 'frontend & mobile' : item}
           </motion.button>
         ))}
       </div>
@@ -116,7 +126,7 @@ const Skills = () => {
   )
 }
 
-const SkillSets = ({ skill }: { skill: ISkillSets }) => {
+const SkillSets = memo(({ skill }: { skill: ISkillSets }) => {
   const skillSetsVariants: Variants = {
     initial: {
       opacity: 0,
@@ -141,12 +151,12 @@ const SkillSets = ({ skill }: { skill: ISkillSets }) => {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="w-50 h-50 flex h-full w-full flex-col items-center justify-center space-y-2 whitespace-nowrap rounded-lg p-4 text-sm"
+      className="flex h-full w-full flex-col items-center justify-center space-y-2 rounded-lg p-4 text-sm whitespace-nowrap"
     >
       <div className="relative z-10">{skill.icon && <skill.icon />}</div>
       <div className="relative z-10">{skill.name}</div>
     </motion.div>
   )
-}
+})
 
 export default Skills

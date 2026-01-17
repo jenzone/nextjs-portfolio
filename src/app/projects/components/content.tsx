@@ -10,7 +10,7 @@ import projects from '@/data/projects.json'
 
 const ProjectContent = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: true, margin: '-20%' })
 
   const controls = useAnimation()
 

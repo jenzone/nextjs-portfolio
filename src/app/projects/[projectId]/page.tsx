@@ -15,9 +15,17 @@ export default async function ProjectPage({
 
   if (!project) {
     return (
-      <div className="flex items-center justify-center py-20 text-2xl font-bold">
-        Project not found
-      </div>
+      <main>
+        <Container>
+          <NavBar />
+        </Container>
+        <div className="flex h-100 flex-col items-center justify-center space-y-2 py-20">
+          <div className="text-4xl font-bold">🔍 Project not found.</div>
+          <div className="text-sm font-light">
+            This project is not existing.
+          </div>
+        </div>
+      </main>
     )
   }
 
