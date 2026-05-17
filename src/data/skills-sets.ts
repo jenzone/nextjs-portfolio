@@ -35,6 +35,7 @@ import {
   SiDocker,
   SiDrizzle,
   SiGithubactions,
+  SiExpo,
 } from '@icons-pack/react-simple-icons'
 
 export const skills = [
@@ -232,5 +233,10 @@ export const skills = [
     name: 'GitHub Actions',
     category: 'other',
     icon: SiGithubactions,
+  },
+  {
+    name: 'Expo',
+    category: 'frontend',
+    icon: SiExpo,
   },
 ]

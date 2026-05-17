@@ -1,5 +1,18 @@
 [
   {
+    "id": "fc-home-service",
+    "name": "FC Home Service",
+    "description": "A Grab-style mobile app for booking home repair and maintenance services with customer, provider, and worker management systems.",
+    "img": "fc-home-service.png",
+    "techstack": ["Expo", "React Native", "TypeScript"],
+    "featured": true,
+    "links": {
+      "github": "",
+      "live": ""
+    },
+    "figma_link": "https://embed.figma.com/design/MHYZ30sjjWQDkxAkO7ySTZ/Portfolio-Projects?node-id=0-1&embed-host=share"
+  },
+  {
     "id": "js-furniture",
     "name": "JS Furniture",
     "description": "A furniture store where customers can find everything they need to furnish their homes with style and comfort.",
