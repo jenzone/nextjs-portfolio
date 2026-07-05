@@ -1,3 +1,5 @@
+packages:
+  - '.'
 allowBuilds:
   '@tailwindcss/oxide': true
   '@tsparticles/engine': true
