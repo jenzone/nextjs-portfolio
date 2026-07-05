@@ -4,6 +4,7 @@ type ButtonProps = {
   className?: string
   type?: 'button' | 'submit' | 'reset'
   onClick?: () => void
+  disabled?: boolean
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -12,6 +13,7 @@ export const Button: React.FC<ButtonProps> = ({
   className,
   type = 'button',
   onClick,
+  disabled,
 }) => {
   let buttonStyle, hoverAnimation
 
@@ -25,7 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
     default:
       buttonStyle =
         'bg-linear-to-r from-(--primary) to-(--primary-light) text-(--foreground)'
-      hoverAnimation = (
+      hoverAnimation = disabled ? null : (
         <span className="absolute inset-0.5 transform rounded-xs border-2 border-(--accent) transition-transform duration-300 will-change-transform group-hover:translate-x-2 group-hover:translate-y-2" />
       )
       break
@@ -33,7 +35,12 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <div>
-      <button className={`${className} group relative z-20`} type={type} onClick={onClick}>
+      <button
+        className={`${className} group relative z-20 ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+        type={type}
+        onClick={onClick}
+        disabled={disabled}
+      >
         {/* button content */}
         <span
           className={`relative z-10 flex items-center justify-center rounded-xs px-4 py-3 ${buttonStyle}`}
