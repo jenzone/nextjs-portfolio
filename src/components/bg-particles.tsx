@@ -1,13 +1,13 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, memo } from 'react'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { type ISourceOptions } from '@tsparticles/engine'
 
 import { loadSlim } from '@tsparticles/slim'
 import particlesConfig from '@/config/particles-nasa.json'
 
-const BackgroundParticles = () => {
+const BackgroundParticles = memo(() => {
   const [init, setInit] = useState(false)
 
   useEffect(() => {
@@ -26,17 +26,12 @@ const BackgroundParticles = () => {
     }
   }, [])
 
-  // const particlesLoaded = async (container?: Container): Promise<void> => {
-  //   console.log(container)
-  // }
-
   const options = useMemo(() => particlesConfig as ISourceOptions, [])
 
   if (init) {
     return (
       <Particles
         id="tsparticles"
-        // particlesLoaded={particlesLoaded}
         options={options}
         className="fixed z-0 h-full w-full object-contain"
       />
@@ -44,6 +39,8 @@ const BackgroundParticles = () => {
   }
 
   return <></>
-}
+})
+
+BackgroundParticles.displayName = 'BackgroundParticles'
 
 export default BackgroundParticles
