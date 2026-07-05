@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 
 import Loading from './loading'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function HomeLayout({
   children,
@@ -13,17 +13,24 @@ export default function HomeLayout({
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000)
+    const timer = setTimeout(() => setLoading(false), 2000)
     return () => clearTimeout(timer)
-  }, [loading])
+  }, [])
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      {loading ? <Loading /> : children}
-    </motion.div>
+    <AnimatePresence mode="wait">
+      {loading ? (
+        <Loading key="loader" />
+      ) : (
+        <motion.div
+          key="content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          {children}
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }

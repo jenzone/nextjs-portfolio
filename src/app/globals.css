@@ -28,6 +28,7 @@
   body {
     color: var(--foreground);
     background: var(--background);
+    transition: background-color 300ms ease, color 300ms ease;
   }
 
   section {
@@ -154,7 +155,319 @@
     width: 150%;
     height: 150%;
   }
-  
+  /* ─── TERMINAL ─────────────────────────────────────────────────────────────── */
+
+  .terminal-panel {
+    background: rgba(10, 14, 20, 0.92);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #c8ffc8;
+    font-family: 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+  }
+
+  .terminal-titlebar {
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .terminal-title {
+    color: rgba(200, 255, 200, 0.5);
+    font-family: 'Fira Code', monospace;
+  }
+
+  .terminal-close-btn {
+    color: rgba(200, 200, 200, 0.6);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .terminal-close-btn:hover {
+    background: rgba(255, 80, 80, 0.18);
+    color: #ff6b6b;
+  }
+
+  .terminal-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: filter 0.2s;
+  }
+
+  .terminal-dot:hover {
+    filter: brightness(1.3);
+  }
+
+  .terminal-dot-red    { background: #ff5f57; }
+  .terminal-dot-yellow { background: #ffbd2e; }
+  .terminal-dot-green  { background: #28c840; }
+
+  .terminal-tabbar {
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .terminal-tab {
+    font-family: 'Fira Code', monospace;
+    border-radius: 4px;
+    color: rgba(200, 255, 200, 0.4);
+  }
+
+  .terminal-tab-active {
+    color: var(--primary-light, #00ccbf);
+    background: rgba(0, 204, 191, 0.1);
+    border-bottom: 1px solid var(--primary-light, #00ccbf);
+  }
+
+  .terminal-tab-inactive:hover {
+    color: rgba(200, 255, 200, 0.7);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .terminal-theme-badge {
+    font-family: 'Fira Code', monospace;
+    color: var(--primary, #3f7c85);
+    background: rgba(63, 124, 133, 0.12);
+    border: 1px solid rgba(63, 124, 133, 0.2);
+  }
+
+  .terminal-output {
+    background: transparent;
+    color: #c8ffc8;
+  }
+
+  .terminal-line {
+    color: rgba(200, 255, 200, 0.85);
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .terminal-log-entry {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .terminal-timestamp {
+    color: var(--primary, #3f7c85);
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+  }
+
+  .terminal-log-msg {
+    color: rgba(200, 255, 200, 0.8);
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+  }
+
+  .terminal-input-row {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .terminal-prompt {
+    color: var(--primary-light, #00ccbf);
+    font-weight: bold;
+  }
+
+  .terminal-input {
+    color: #e8ffe8;
+    caret-color: var(--primary-light, #00ccbf);
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+  }
+
+  .terminal-input::placeholder {
+    color: rgba(200, 255, 200, 0.25);
+  }
+
+  /* ─── TERMINAL TRIGGER ───────────────────────────────────────────────────── */
+
+  .terminal-trigger {
+    background: var(--primary, #3f7c85);
+    color: var(--foreground, #f7f7f7);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    overflow: visible;
+  }
+
+  .terminal-trigger:hover {
+    background: var(--primary-light, #00ccbf);
+  }
+
+  .terminal-trigger-pulse {
+    background: var(--primary-light, #00ccbf);
+    opacity: 0.5;
+  }
+
+  .terminal-trigger-icon {
+    color: white;
+    font-size: 13px;
+  }
+
+  .terminal-trigger-badge {
+    background: var(--accent, #ff5f5d);
+    color: white;
+    font-family: 'Fira Code', monospace;
+  }
+
+  /* ─── THEME SYSTEM ───────────────────────────────────────────────────────── */
+
+  /* Each theme updates the CSS variables via JS (inline style on html element). */
+  /* The terminal-related colors adapt automatically since they reference var(--primary) etc. */
+
+  /* Scrollbar in terminal */
+  .terminal-output.scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary, #3f7c85) rgba(255,255,255,0.05);
+  }
+
+  /* ─── PHYSICS SANDBOX ────────────────────────────────────────────────────── */
+
+  .theme-chip-active {
+    background: rgba(0, 204, 191, 0.1);
+    border: 1px solid rgba(0, 204, 191, 0.35);
+    color: var(--primary-light, #00ccbf);
+    box-shadow: 0 0 8px rgba(0, 204, 191, 0.15);
+  }
+
+  .theme-chip-inactive {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: rgba(200, 255, 200, 0.45);
+  }
+
+  .theme-chip-inactive:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: rgba(200, 255, 200, 0.8);
+  }
+}
+
+/* ─── TERMINAL HACKER THEME OVERRIDES ────────────────────────────── */
+
+/* Scanline Overlay Screen Filter */
+[data-theme='hacker']::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(85, 208, 130, 0.02), rgba(85, 208, 130, 0.01), rgba(85, 208, 130, 0.02));
+  z-index: 99999;
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  opacity: 0.15; /* Highly reduced opacity to prevent eye flicker/strain */
+}
+
+[data-theme='hacker'] {
+  font-family: var(--font-mono), 'Fira Code', monospace !important;
+}
+
+[data-theme='hacker'] h1,
+[data-theme='hacker'] h2,
+[data-theme='hacker'] h3,
+[data-theme='hacker'] h4,
+[data-theme='hacker'] h5,
+[data-theme='hacker'] h6,
+[data-theme='hacker'] .heading,
+[data-theme='hacker'] .text-3xl,
+[data-theme='hacker'] .text-4xl,
+[data-theme='hacker'] .text-5xl,
+[data-theme='hacker'] .text-xl,
+[data-theme='hacker'] .font-bold,
+[data-theme='hacker'] body,
+[data-theme='hacker'] button,
+[data-theme='hacker'] input,
+[data-theme='hacker'] textarea,
+[data-theme='hacker'] span,
+[data-theme='hacker'] div,
+[data-theme='hacker'] p,
+[data-theme='hacker'] a {
+  font-family: var(--font-mono), 'Fira Code', monospace !important;
+}
+
+/* Wrap section header text in computer brackets [ About Me ] */
+[data-theme='hacker'] .heading::before {
+  content: "[ ";
+  color: var(--accent) !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  background-color: transparent !important;
+}
+[data-theme='hacker'] .heading::after {
+  content: " ]";
+  color: var(--accent) !important;
+}
+
+/* Hide watermark heading shadows for a clean console look */
+[data-theme='hacker'] .text {
+  display: none !important;
+}
+
+/* Remove rounded corners and soft shadows globally for cards, inputs, and buttons */
+[data-theme='hacker'] .shadow-lg,
+[data-theme='hacker'] .shadow-xl,
+[data-theme='hacker'] .shadow-2xl,
+[data-theme='hacker'] .rounded-lg,
+[data-theme='hacker'] .rounded-md,
+[data-theme='hacker'] .rounded-sm,
+[data-theme='hacker'] .rounded-xl,
+[data-theme='hacker'] [class*='project-card'],
+[data-theme='hacker'] [href*='/projects'] > div,
+[data-theme='hacker'] [class*='contact'],
+[data-theme='hacker'] input,
+[data-theme='hacker'] textarea,
+[data-theme='hacker'] button,
+[data-theme='hacker'] .border {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+/* Ensure circular elements (like theme selector bubbles) remain circular */
+[data-theme='hacker'] .rounded-full {
+  border-radius: 9999px !important;
+}
+
+/* Apply soft green console borders and minimal glow */
+[data-theme='hacker'] [href*='/projects'] > div,
+[data-theme='hacker'] input,
+[data-theme='hacker'] textarea {
+  border: 1px solid rgba(85, 208, 130, 0.25) !important;
+  background-color: #0a0f0c !important;
+  box-shadow: 0 0 8px rgba(85, 208, 130, 0.04) !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+/* Amber warning highlights when focus is active */
+[data-theme='hacker'] input:focus,
+[data-theme='hacker'] textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 10px rgba(229, 169, 59, 0.15) !important;
+  outline: none !important;
+}
+
+/* Force readable dark text on solid gradient buttons */
+[data-theme='hacker'] button span[class*='bg-linear-to-r'] {
+  color: #0a0f0c !important;
+  font-weight: bold !important;
+}
+[data-theme='hacker'] button span[class*='bg-linear-to-r'] svg {
+  color: #0a0f0c !important;
+}
+
+/* Force outline style and interactions for hacker buttons */
+[data-theme='hacker'] button span[class*='bg-transparent'] {
+  border: 1px solid var(--primary-light) !important;
+  color: var(--primary-light) !important;
+}
+[data-theme='hacker'] button span[class*='bg-transparent']:hover {
+  background-color: var(--primary-light) !important;
+  color: #0a0f0c !important;
+  box-shadow: 0 0 10px var(--primary-light) !important;
+}
+
+[data-theme='hacker'] .contact-card {
+  border: 1px solid rgba(85, 208, 130, 0.25) !important;
+  background: #0a0f0c !important;
 }
 
 
