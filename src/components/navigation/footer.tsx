@@ -18,11 +18,11 @@ const Footer = () => {
       <div className="cursor-pointer">
         {isHomePage ? (
           <ScrollLink to="hero" smooth={true} duration={500} delay={200}>
-            <Image src="/logo-light.svg" alt="logo" width={28} height={28} />
+            <Image src="/logo-light.svg" alt="logo" width={24} height={28} />
           </ScrollLink>
         ) : (
           <Link href="/">
-            <Image src="/logo-light.svg" alt="logo" width={28} height={28} />
+            <Image src="/logo-light.svg" alt="logo" width={24} height={28} />
           </Link>
         )}
       </div>
