@@ -53,7 +53,7 @@ const NavBar = () => {
       {/* LOGO */}
       <motion.div variants={navBarChildVariants}>
         <Link href="/" className="h-auto w-auto">
-          <Image src="/logo-light.svg" alt="logo" width={32} height={32} />
+          <Image src="/logo-light.svg" alt="logo" width={27} height={32} />
         </Link>
       </motion.div>
       {/* LINKS */}
